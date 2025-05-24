@@ -1,0 +1,82 @@
+[
+  {
+    "city": "London",
+    "countryCode": "GB",
+    "countryName": "United Kingdom",
+    "iana": "Europe/London",
+    "lat": 51.5074,
+    "lon": 0.1278
+  },
+  {
+    "city": "New York",
+    "countryCode": "US",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": 40.7128,
+    "lon": -74.0060
+  },
+  {
+    "city": "Tokyo",
+    "countryCode": "JP",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": 35.6895,
+    "lon": 139.6917
+  },
+  {
+    "city": "Paris",
+    "countryCode": "FR",
+    "countryName": "France",
+    "iana": "Europe/Paris",
+    "lat": 48.8566,
+    "lon": 2.3522
+  },
+  {
+    "city": "Sydney",
+    "countryCode": "AU",
+    "countryName": "Australia",
+    "iana": "Australia/Sydney",
+    "lat": -33.8688,
+    "lon": 151.2093
+  },
+  {
+    "city": "Moscow",
+    "countryCode": "RU",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": 55.7558,
+    "lon": 37.6173
+  },
+  {
+    "city": "Cairo",
+    "countryCode": "EG",
+    "countryName": "Egypt",
+    "iana": "Africa/Cairo",
+    "lat": 30.0444,
+    "lon": 31.2357
+  },
+  {
+    "city": "Beijing",
+    "countryCode": "CN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": 39.9042,
+    "lon": 116.4074
+  },
+  {
+    "city": "Mexico City",
+    "countryCode": "MX",
+    "countryName": "Mexico",
+    "iana": "America/Mexico_City",
+    "lat": 19.4326,
+    "lon": -99.1332
+  },
+  {
+    "city": "Sao Paulo",
+    "countryCode": "BR",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": -23.5505,
+    "lon": -46.6333
+  }
+]
