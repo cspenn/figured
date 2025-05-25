@@ -55,10 +55,10 @@ async function init() {
     await loadUserTimezones();
     await addCurrentSystemTimezone(); // Add this call
     checkFirstRun(); // This might interact with system timezone; ensure logic is sound
-    renderTimezones();
-    startUpdateInterval();
+    renderTimezones(); // This will do the initial render
+    // startUpdateInterval(); // REMOVE THIS LINE
     
-    // Setup event listeners
+    // Setup event listeners (existing)
     setHomeBtn.addEventListener('click', handleSetHomeTimezone);
     addCityBtn.addEventListener('click', handleAddCity);
     notificationCloseBtn.addEventListener('click', hideNotification);
@@ -233,10 +233,23 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
 
         // Timezone abbreviation and UTC offset
         const tzAbbr = new Intl.DateTimeFormat(navigator.language, {timeZone: timezoneData.iana, timeZoneName: 'short'}).formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'N/A';
-        const utcOffset = new Intl.DateTimeFormat(navigator.language, {timeZone: timezoneData.iana, timeZoneName: 'longOffset'}).formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'N/A';
+        
+        let formattedUtcOffset = 'N/A';
+        try {
+            const offsetParts = new Intl.DateTimeFormat('en-US', {timeZone: timezoneData.iana, timeZoneName: 'longOffset'}).formatToParts(now);
+            const offsetString = offsetParts.find(p => p.type === 'timeZoneName')?.value;
+            if (offsetString && offsetString.startsWith('GMT')) {
+                formattedUtcOffset = 'UTC' + offsetString.substring(3);
+            } else if (offsetString) {
+                formattedUtcOffset = offsetString; // Use as is if not GMT prefixed but found
+            }
+        } catch (e) {
+            console.error(`Error getting longOffset for ${timezoneData.iana}:`, e);
+            // formattedUtcOffset remains 'N/A'
+        }
 
         cardElement.querySelector('.tz-abbr').textContent = tzAbbr;
-        cardElement.querySelector('.utc-offset').textContent = utcOffset.startsWith('GMT') ? 'UTC' + utcOffset.substring(3) : utcOffset;
+        cardElement.querySelector('.utc-offset').textContent = formattedUtcOffset; // Use the new variable
 
         // DST indicator
         const dstCheckFormatter = new Intl.DateTimeFormat('en-US', { timeZone: timezoneData.iana, timeZoneName: 'long' });
@@ -264,18 +277,22 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
     }
 }
 
-// Start the interval to update times every second
-function startUpdateInterval() {
-    setInterval(() => {
-        const now = new Date();
-        const cards = timezoneGrid.querySelectorAll('.timezone-card');
-        userTimezones.forEach((tzData, index) => {
-            const cardElement = cards[index];
-            if (cardElement) {
-                updateTimezoneCard(cardElement, tzData, now);
-            }
-        });
-    }, 1000);
+// Update all displayed timezone cards
+function updateAllDisplayedTimes() {
+    const now = new Date();
+    const cards = timezoneGrid.querySelectorAll('.timezone-card'); // Ensure timezoneGrid is defined
+    if (!userTimezones || !cards.length) return;
+
+    userTimezones.forEach((tzData, index) => {
+        const cardElement = cards[index]; // Assumes cards are in same order as userTimezones
+        if (cardElement) {
+            updateTimezoneCard(cardElement, tzData, now);
+        } else {
+            // This case might indicate a mismatch, e.g., if renderTimezones hasn't completed
+            // or if the card structure is unexpectedly different.
+            // console.warn(`Card not found for timezone at index ${index}: ${tzData.city}`);
+        }
+    });
 }
 
 // Handle adding a new city
@@ -464,16 +481,18 @@ async function addCurrentSystemTimezone() {
             return;
         }
 
-        // Check if system timezone is already added by the user or as home
-        const alreadyExists = userTimezones.some(tz => tz.iana === systemIANA);
-        if (alreadyExists) {
+        const alreadyExistingEntry = userTimezones.find(tz => tz.iana === systemIANA);
+        if (alreadyExistingEntry) {
             console.log("System timezone already present in user's list:", systemIANA);
-            // Optionally, mark the existing card if it matches system IANA
-            const existingCard = userTimezones.find(tz => tz.iana === systemIANA);
-            if (existingCard && !existingCard.isSystem) { // Add a flag
-                existingCard.isSystemMarker = true; // This flag can be used for styling
+            if (!alreadyExistingEntry.isSystemMarker && !alreadyExistingEntry.isSystem) { // Check if not already marked
+                alreadyExistingEntry.isSystemMarker = true; 
+                // If this change should trigger a re-render immediately:
+                // renderTimezones(); 
+                // Note: init() calls renderTimezones() after this, so it might be covered.
+                // Consider if saveUserTimezones() is needed if isSystemMarker is persisted.
+                // For now, isSystemMarker is primarily for styling during the current session.
             }
-            return;
+            return; // Stop further processing to avoid adding a duplicate
         }
 
         const systemLocationData = allLocations.find(loc => loc.iana === systemIANA);
@@ -490,7 +509,7 @@ async function addCurrentSystemTimezone() {
             return;
         }
 
-        const systemTimezone = { ...systemLocationData, isSystem: true, userAdded: false }; // userAdded: false to differentiate
+        const systemTimezone = { ...systemLocationData, isSystem: true, userAdded: false, isSystemMarker: true }; // Ensure isSystemMarker is also true
         userTimezones.push(systemTimezone); // Or unshift to put it first/last consistently
         // No need to call saveUserTimezones() here if we don't want to persist it as a *user choice*
         // If it should be persistent until removed, then call save. For now, let's make it non-persistent unless saved by other means.
@@ -503,6 +522,16 @@ async function addCurrentSystemTimezone() {
         showNotification("Could not determine or add your system timezone.", 'error');
     }
 }
+
+// Add this listener (typically towards the end of the file or after init is defined)
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'FIG_UPDATE_TIME') {
+        // console.log('Newtab received FIG_UPDATE_TIME from service worker');
+        updateAllDisplayedTimes();
+        sendResponse({ status: "Times updated on newtab" }); // Optional: send a response
+        return true; // Indicates you wish to send a response asynchronously (if needed)
+    }
+});
 
 // Initialize the extension
 init();

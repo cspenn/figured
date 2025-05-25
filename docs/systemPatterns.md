@@ -10,6 +10,7 @@
 ## Key Technical Decisions
 - Using Memory Bank documentation system (.clinerules)
 - Time updates managed by `setInterval` within `newtab.js` for V1.0/V1.1.
++ Time updates managed by `chrome.alarms` API, coordinated by the service worker, for enhanced efficiency (Target: V1.1).
 
 ## Design Patterns
 - Documentation-driven development
