@@ -37,21 +37,25 @@ function hideNotification() {
 // Data
 let allLocations = [];
 let userTimezones = [];
+let isSuggestionClicked = false; // Flag for mousedown interaction
 
 // Initialize the extension
 // Debounce utility
 function debounce(func, delay) {
     let timeoutId;
     return function(...args) {
+        const context = this; // Capture the correct 'this' context
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
-            func.apply(this, args);
+            // func.apply(this, args); // Original
+            func.apply(context, args); // Use captured context and spread arguments
         }, delay);
     };
 }
 
 async function init() {
     await loadLocationsData();
+    console.log('[Figured] init: allLocations loaded, count:', allLocations.length); // Verification log
     await loadUserTimezones();
     await addCurrentSystemTimezone(); // Add this call
     checkFirstRun(); // This might interact with system timezone; ensure logic is sound
@@ -64,9 +68,16 @@ async function init() {
     notificationCloseBtn.addEventListener('click', hideNotification);
     citySearchInput.addEventListener('input', debounce(handleCitySearchInput, 300));
     citySearchInput.addEventListener('blur', () => {
+        console.log('[Figured] citySearchInput blur event triggered. isSuggestionClicked:', isSuggestionClicked);
+        // Delay hiding to allow mousedown on suggestions to process
         setTimeout(() => {
-            citySuggestionsList.style.display = 'none';
-        }, 150);
+            if (!isSuggestionClicked) {
+                citySuggestionsList.style.display = 'none';
+                console.log('[Figured] Hiding citySuggestionsList due to blur timeout (no suggestion click).');
+            }
+            // Reset flag regardless, for next interaction
+            isSuggestionClicked = false; 
+        }, 200); // Increased delay slightly to be safer
     });
 }
 
@@ -223,40 +234,76 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         const timeFormatter = new Intl.DateTimeFormat(navigator.language, optionsTime);
         const timeString = timeFormatter.format(now);
         const [timeValue, amPmValue = ''] = timeString.split(' ');
-
-        cardElement.querySelector('.current-time').textContent = timeValue;
-        cardElement.querySelector('.current-time .am-pm').textContent = amPmValue;
-
+    
+        // Correctly target the '.time-value' span for the main time
+        const timeValueElement = cardElement.querySelector('.time-value');
+        if (timeValueElement) {
+            timeValueElement.textContent = timeValue;
+        } else {
+            console.error("Element with class '.time-value' not found in card for:", timezoneData.city);
+        }
+    
+        // Target the '.am-pm' span
+        const amPmElement = cardElement.querySelector('.am-pm');
+        if (amPmElement) {
+            amPmElement.textContent = amPmValue;
+        } else {
+            // console.warn("Element with class '.am-pm' not found in card for:", timezoneData.city);
+        }
+            
         // Format date
         const dateFormatter = new Intl.DateTimeFormat(navigator.language, optionsDate);
-        cardElement.querySelector('.current-date').textContent = dateFormatter.format(now);
-
+        const dateElement = cardElement.querySelector('.current-date');
+        if (dateElement) {
+            dateElement.textContent = dateFormatter.format(now);
+        } else {
+            console.error("Element with class '.current-date' not found for:", timezoneData.city);
+        }
+    
         // Timezone abbreviation and UTC offset
         const tzAbbr = new Intl.DateTimeFormat(navigator.language, {timeZone: timezoneData.iana, timeZoneName: 'short'}).formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'N/A';
         
         let formattedUtcOffset = 'N/A';
         try {
             const offsetParts = new Intl.DateTimeFormat('en-US', {timeZone: timezoneData.iana, timeZoneName: 'longOffset'}).formatToParts(now);
-            const offsetString = offsetParts.find(p => p.type === 'timeZoneName')?.value;
-            if (offsetString && offsetString.startsWith('GMT')) {
-                formattedUtcOffset = 'UTC' + offsetString.substring(3);
-            } else if (offsetString) {
-                formattedUtcOffset = offsetString; // Use as is if not GMT prefixed but found
-            }
+            const offsetStringPart = offsetParts.find(p => p.type === 'timeZoneName'); // find the part object
+            if (offsetStringPart) {
+                const offsetStringValue = offsetStringPart.value;
+                if (offsetStringValue && offsetStringValue.startsWith('GMT')) {
+                    formattedUtcOffset = 'UTC' + offsetStringValue.substring(3);
+                } else if (offsetStringValue) {
+                    formattedUtcOffset = offsetStringValue; // Use as is if not GMT prefixed but found
+                }
+            } // else formattedUtcOffset remains 'N/A' if part not found
         } catch (e) {
             console.error(`Error getting longOffset for ${timezoneData.iana}:`, e);
             // formattedUtcOffset remains 'N/A'
         }
-
-        cardElement.querySelector('.tz-abbr').textContent = tzAbbr;
-        cardElement.querySelector('.utc-offset').textContent = formattedUtcOffset; // Use the new variable
-
+    
+        const tzAbbrElement = cardElement.querySelector('.tz-abbr');
+        if (tzAbbrElement) {
+            tzAbbrElement.textContent = tzAbbr;
+        } else {
+            console.error("Element with class '.tz-abbr' not found for:", timezoneData.city);
+        }
+    
+        const utcOffsetElement = cardElement.querySelector('.utc-offset');
+        if (utcOffsetElement) {
+            utcOffsetElement.textContent = formattedUtcOffset;
+        } else {
+            console.error("Element with class '.utc-offset' not found for:", timezoneData.city);
+        }
+    
         // DST indicator
         const dstCheckFormatter = new Intl.DateTimeFormat('en-US', { timeZone: timezoneData.iana, timeZoneName: 'long' });
         const isDST = dstCheckFormatter.format(now).toLowerCase().includes('daylight');
         const dstIndicator = cardElement.querySelector('.dst-indicator');
-        dstIndicator.style.display = isDST ? 'inline' : 'none';
-
+        if (dstIndicator) {
+            dstIndicator.style.display = isDST ? 'inline' : 'none';
+        } else {
+            console.error("Element with class '.dst-indicator' not found for:", timezoneData.city);
+        }
+            
         // Set day/night color
         const hourInZone = new Date(now.toLocaleString('en-US', {timeZone: timezoneData.iana})).getHours();
         cardElement.classList.remove('day', 'evening', 'night');
@@ -270,10 +317,21 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
 
     } catch (error) {
         console.error(`Error updating card for ${timezoneData.city} (IANA: ${timezoneData.iana}):`, error);
-        cardElement.querySelector('.current-time').textContent = "Error";
-        cardElement.querySelector('.current-date').textContent = "N/A";
-        cardElement.querySelector('.tz-abbr').textContent = "ERR";
-        cardElement.querySelector('.utc-offset').textContent = "ERR";
+        // Fallback content setters with null checks
+        const fallbackTime = cardElement.querySelector('.time-value'); // Target specific element
+        if (fallbackTime) fallbackTime.textContent = "Error";
+        
+        const fallbackAmPm = cardElement.querySelector('.am-pm');
+        if (fallbackAmPm) fallbackAmPm.textContent = "";
+
+        const fallbackDate = cardElement.querySelector('.current-date');
+        if (fallbackDate) fallbackDate.textContent = "N/A";
+
+        const fallbackTzAbbr = cardElement.querySelector('.tz-abbr');
+        if (fallbackTzAbbr) fallbackTzAbbr.textContent = "ERR";
+        
+        const fallbackUtcOffset = cardElement.querySelector('.utc-offset');
+        if (fallbackUtcOffset) fallbackUtcOffset.textContent = "ERR";
     }
 }
 
@@ -297,6 +355,7 @@ function updateAllDisplayedTimes() {
 
 // Handle adding a new city
 async function handleAddCity() {
+    console.log('[Figured] handleAddCity triggered. Input value:', citySearchInput.value);
     const selectedCityName = citySearchInput.value.trim();
     if (!selectedCityName) {
         locationNotFoundMsg.style.display = 'none';
@@ -310,7 +369,8 @@ async function handleAddCity() {
     );
 
     if (!foundLocation) {
-        updateLocationNotFoundMessage(selectedCityName);
+        updateLocationNotFoundMessage(selectedCityName); // This will set the text content
+        console.log('[Figured] Location not found, displaying message for:', selectedCityName);
         locationNotFoundMsg.style.display = 'block';
         return;
     }
@@ -413,13 +473,16 @@ function updateLocationNotFoundMessage(searchTerm) {
 
 // Handle city search input
 function handleCitySearchInput() {
+    console.log('[Figured] handleCitySearchInput triggered.');
     // Clear not found message when typing
     locationNotFoundMsg.style.display = 'none';
     const searchTerm = citySearchInput.value.trim().toLowerCase();
+    console.log('[Figured] Search Term:', searchTerm);
 
     if (searchTerm.length < 2) {
         citySuggestionsList.innerHTML = '';
         citySuggestionsList.style.display = 'none';
+        console.log('[Figured] Search term too short, hiding suggestions.');
         return;
     }
 
@@ -428,11 +491,13 @@ function handleCitySearchInput() {
         loc.countryName.toLowerCase().includes(searchTerm) ||
         loc.iana.toLowerCase().includes(searchTerm)
     ).slice(0, 10);
+    console.log('[Figured] Suggestions found:', suggestions);
 
     renderSuggestions(suggestions);
 }
 
 function renderSuggestions(suggestions) {
+    console.log('[Figured] renderSuggestions called with:', suggestions.length, 'suggestions.');
     citySuggestionsList.innerHTML = '';
     if (suggestions.length === 0) {
         citySuggestionsList.style.display = 'none';
@@ -445,9 +510,12 @@ function renderSuggestions(suggestions) {
         li.dataset.iana = loc.iana;
         li.dataset.cityName = loc.city;
         li.addEventListener('mousedown', () => {
-            citySearchInput.value = `${loc.city}, ${loc.countryName}`;
-            citySuggestionsList.style.display = 'none';
-            handleAddCity();
+            isSuggestionClicked = true; // Set flag on mousedown
+            console.log('[Figured] Suggestion mousedown. isSuggestionClicked set to true.');
+            citySearchInput.value = `${loc.city}, ${loc.countryName}`; // Set input value before calling handleAddCity
+            console.log('[Figured] Suggestion clicked. Input set to:', citySearchInput.value);
+            // citySuggestionsList.style.display = 'none'; // Let blur handler take care of this, or handleAddCity
+            handleAddCity(); // This will now use the value set above
         });
         citySuggestionsList.appendChild(li);
     });

@@ -28,6 +28,21 @@ Polish Phase (Revised Plan)
     - [x] Verify that the current implementation of saving and loading `userTimezones` in `figured/newtab/newtab.js` implicitly preserves the intended display order (e.g., Home first, then System, then user-added in order of addition). Document this behavior. No code change if current implicit order is sufficient for V1.
 - [x] **Alarm Permission Fix:**
     - [x] Added "alarms" permission to `figured/manifest.json`.
+- [x] **JavaScript Runtime Error Fix & Null Checks:**
+    - [x] Corrected the JavaScript runtime error in `updateTimezoneCard` in `figured/newtab/newtab.js` and added null checks for DOM element targeting.
+- [x] **HTML Structure Verification:**
+    - [x] Verified `figured/newtab/newtab.html` structure; no changes were needed as it aligned with JS expectations.
+- [x] **CSS Visual Overhaul:**
+    - [x] Overhauled `figured/newtab/newtab.css` to match the provided visual design specifications, including new color gradients, fonts, spacing, and element styling.
+- [x] **City Search Input Fixes:**
+    - [x] Refined `debounce` utility function in `figured/newtab/newtab.js`.
+    - [x] Enhanced `handleCitySearchInput` with robustness and logging in `figured/newtab/newtab.js`.
+    - [x] Added logging to `blur` event handler for suggestion list in `figured/newtab/newtab.js`.
+    - [x] Added verification log for `allLocations` loading in `init()` in `figured/newtab/newtab.js`.
+    - [x] Added logging to `handleAddCity` in `figured/newtab/newtab.js`.
+    - [x] Verified `figured/newtab/newtab.html` for correct element IDs and structure (no changes needed).
+    - [x] Verified `figured/newtab/newtab.css` for suggestion list visibility (no changes needed).
+    - [x] Implemented `blur` and `mousedown` interaction fix in `figured/newtab/newtab.js` to prevent premature hiding of the suggestion list.
 
 ## Next Steps
 Proceeding with the Testing & Validation phase as outlined in `docs/polish.md`. This includes performance profiling, accessibility checks, cross-browser/OS spot checks, and regression testing.
