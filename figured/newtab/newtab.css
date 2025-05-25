@@ -144,3 +144,76 @@ body {
     border-radius: 3px;
     display: none;
 }
+
+/* Notification Area Styles */
+.notification-area {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3f3f3f;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.notification-area.error {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.notification-area.success {
+    background-color: #388e3c;
+    color: white;
+}
+
+#notification-message {
+    margin-right: 15px;
+}
+
+.notification-close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* Autocomplete Suggestions Styles */
+.city-suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3f3f3f;
+    border: 1px solid #555;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 999;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.city-suggestions-list li {
+    padding: 8px 12px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.city-suggestions-list li:hover,
+.city-suggestions-list li.selected {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.add-timezone-wrapper {
+    position: relative;
+}

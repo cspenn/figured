@@ -1,6 +1,6 @@
 ## **Product Requirements Document: "Figured" (FIO Recreation)**
 
-Version: 1.1 (Incorporating 2025 Best Practices)  
+Version: 1.1.1 (Incorporating 2025 Best Practices & Polish)
 Date: May 24, 2025  
 1\. Introduction  
 This document outlines the requirements for "Figured," a Google Chrome extension designed to recreate and enhance the core functionality of the formerly available "Figure It Out" (FIO) extension. Figured will allow users to view multiple timezones simultaneously on their Chrome new tab page. A key design principle is that the extension will be completely locally run and self-contained, with no external network dependencies for its core operations at runtime, adhering to a single, focused purpose.  
@@ -34,7 +34,7 @@ This document outlines the requirements for "Figured," a Google Chrome extension
 * **Epic: Managing Timezone Selections**  
   * As a user, I want to add new timezones to my display by searching for city names from a predefined list.  
   * As a user, I want to be able to display up to 24 timezones simultaneously.  
-  * As a user, I want to easily remove any displayed timezone (including my "Home" or "Current System" zone if I choose) with a simple click.  
+  * As a user, I want to easily remove any displayed timezone (including my "Current System" zone if I choose) with a simple click, but the "Home" timezone should require setting a new "Home" timezone before it can be removed.
   * As a user, when I add a city, I want other major cities that are currently observing the exact same effective time (e.g., all cities in CEST) to be automatically added from the extension's known list, provided they are not already displayed and the total count does not exceed the maximum, so I get broader coverage for that time region effortlessly.  
   * As a user, I want all my selected timezones, including my "Home" choice and their display order, to be saved locally and automatically reloaded when I open a new tab or restart my browser.  
 * **Epic: First-Run Experience & Configuration**  
@@ -73,7 +73,7 @@ This document outlines the requirements for "Figured," a Google Chrome extension
   * FR8.1: Upon a user adding a location, the system MUST check its bundled database for other distinct city entries that currently resolve to the exact same effective time zone (i.e., same UTC offset and DST rules at that moment).  
   * FR8.2: Any such identified "shared locations" MUST be automatically added to the user's display if not already present and if the 24-column limit is not exceeded.  
 * **FR9: Removing Timezones:**  
-  * FR9.1: Users MUST be able to remove any displayed timezone column (including "Home," "Current System," or auto-added ones) via a clear and accessible UI element (e.g., an 'X' icon on the column).  
+  * FR9.1: Users MUST be able to remove any displayed timezone column (including "Current System," or auto-added ones) via a clear and accessible UI element (e.g., an 'X' icon on the column). The designated "Home" timezone cannot be directly removed; users should be prompted to set a different "Home" timezone if they attempt to remove the current one, or the removal option for the active "Home" timezone should be disabled/hidden.
 * **FR10: Data Persistence:**  
   * FR10.1: All user-selected timezones (including the "Home" timezone) and their display order MUST be saved locally using chrome.storage.local. (Note: User-selected city preferences are not considered highly sensitive data for V1; advanced encryption for this specific local data is a future consideration if deemed necessary).  
   * FR10.2: Saved configurations MUST be automatically loaded when a new tab is opened.  

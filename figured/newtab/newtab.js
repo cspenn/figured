@@ -6,24 +6,68 @@ const homeTimezoneSelect = document.getElementById('home-timezone-select');
 const setHomeBtn = document.getElementById('set-home-btn');
 const addCityBtn = document.getElementById('add-city-btn');
 const citySearchInput = document.getElementById('city-search-input');
+const citySuggestionsList = document.getElementById('city-suggestions-list');
 const locationNotFoundMsg = document.getElementById('location-not-found-msg');
+const notificationArea = document.getElementById('notification-area');
+const notificationMessage = document.getElementById('notification-message');
+const notificationCloseBtn = document.getElementById('notification-close-btn');
+
+// Notification System
+function showNotification(message, type = 'info', duration = 3000) {
+    notificationMessage.textContent = message;
+    notificationArea.className = 'notification-area';
+    if (type === 'error') {
+        notificationArea.classList.add('error');
+    } else if (type === 'success') {
+        notificationArea.classList.add('success');
+    }
+    notificationArea.style.display = 'block';
+
+    if (duration) {
+        setTimeout(() => {
+            hideNotification();
+        }, duration);
+    }
+}
+
+function hideNotification() {
+    notificationArea.style.display = 'none';
+}
 
 // Data
 let allLocations = [];
 let userTimezones = [];
 
 // Initialize the extension
+// Debounce utility
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(this, args);
+        }, delay);
+    };
+}
+
 async function init() {
     await loadLocationsData();
     await loadUserTimezones();
-    checkFirstRun();
+    await addCurrentSystemTimezone(); // Add this call
+    checkFirstRun(); // This might interact with system timezone; ensure logic is sound
     renderTimezones();
     startUpdateInterval();
     
     // Setup event listeners
     setHomeBtn.addEventListener('click', handleSetHomeTimezone);
     addCityBtn.addEventListener('click', handleAddCity);
-    citySearchInput.addEventListener('input', handleCitySearchInput);
+    notificationCloseBtn.addEventListener('click', hideNotification);
+    citySearchInput.addEventListener('input', debounce(handleCitySearchInput, 300));
+    citySearchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+            citySuggestionsList.style.display = 'none';
+        }, 150);
+    });
 }
 
 // Load locations data from JSON file
@@ -31,12 +75,13 @@ async function loadLocationsData() {
     try {
         const response = await fetch('../common/locations.json');
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`Failed to load locations data. Status: ${response.status}`);
         }
         allLocations = await response.json();
         console.log(`Successfully loaded ${allLocations.length} locations.`);
     } catch (error) {
         console.error("Error loading locations.json:", error);
+        showNotification(`Error: Could not load city data. Some features may not work. (${error.message})`, 'error', null); // null duration = sticky
         allLocations = [];
     }
 }
@@ -151,6 +196,9 @@ function renderTimezones() {
         cardElement.querySelector('.city-name').textContent = tzData.city || 'N/A';
         cardElement.querySelector('.country-name').textContent = tzData.countryName || tzData.countryCode || 'N/A';
 
+        // Add class for system timezone if applicable
+        cardElement.classList.toggle('system-timezone-card', tzData.isSystem || tzData.isSystemMarker);
+
         // Update with current time
         updateTimezoneCard(cardElement, tzData, new Date());
 
@@ -232,46 +280,161 @@ function startUpdateInterval() {
 
 // Handle adding a new city
 async function handleAddCity() {
-    const searchTerm = citySearchInput.value.trim();
-    if (!searchTerm) {
+    const selectedCityName = citySearchInput.value.trim();
+    if (!selectedCityName) {
         locationNotFoundMsg.style.display = 'none';
         return;
     }
 
-    // Search for matching location (case-insensitive)
     const foundLocation = allLocations.find(loc => 
-        loc.city.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        loc.countryName.toLowerCase().includes(searchTerm.toLowerCase())
+        loc.city.toLowerCase() === selectedCityName.toLowerCase() || 
+        `${loc.city}, ${loc.countryName}`.toLowerCase() === selectedCityName.toLowerCase() ||
+        loc.iana === selectedCityName
     );
 
     if (!foundLocation) {
+        updateLocationNotFoundMessage(selectedCityName);
         locationNotFoundMsg.style.display = 'block';
         return;
     }
 
     locationNotFoundMsg.style.display = 'none';
-    
+
+    // Check timezone limit (max 24)
+    if (userTimezones.length >= 24) {
+        showNotification("Maximum of 24 timezones reached.", 'error');
+        return;
+    }
+
     // Check if already added
     const alreadyAdded = userTimezones.some(tz => tz.iana === foundLocation.iana);
     if (alreadyAdded) {
-        alert(`${foundLocation.city} is already in your timezone list`);
+        showNotification(`${foundLocation.city} is already in your timezone list.`, 'info');
+        citySearchInput.value = '';
+        citySuggestionsList.style.display = 'none';
         return;
     }
 
     // Add to user's timezones
     const newTimezone = { ...foundLocation, userAdded: true };
     userTimezones.push(newTimezone);
-    await saveUserTimezones();
-    
-    // Clear search and re-render
+    // await saveUserTimezones(); // Save will happen after shared locations or if none are added
+
+    // Clear search before potentially lengthy shared location search
+    const addedCityName = foundLocation.city; // Store name before clearing input
+    const addedCityIANA = foundLocation.iana;
     citySearchInput.value = '';
+    citySuggestionsList.style.display = 'none';
+    
+    await findAndAddSharedLocations(addedCityIANA); // Call the new function
+    
+    await saveUserTimezones(); // Save all additions (primary + shared)
     renderTimezones();
+    showNotification(`Added ${addedCityName} to your timezones.`, 'success');
+}
+
+// Function to get effective offset string (UTC and DST considered)
+function getEffectiveOffsetString(iana) {
+    try {
+        const now = new Date();
+        // Using longOffset to capture full offset including minutes, and timeZoneName for DST info.
+        const parts = new Intl.DateTimeFormat('en-US', {
+            timeZone: iana,
+            timeZoneName: 'longOffset'
+        }).formatToParts(now);
+        const offsetPart = parts.find(p => p.type === 'timeZoneName');
+        return offsetPart ? offsetPart.value : new Date(now.toLocaleString('en-US', {timeZone: iana})).getTimezoneOffset().toString(); // Fallback
+    } catch (e) {
+        console.error(`Error getting effective offset for ${iana}:`, e);
+        return `error_${iana}`; // Ensure non-match on error
+    }
+}
+
+async function findAndAddSharedLocations(mainAddedIANATimezone) {
+    if (!allLocations || allLocations.length === 0) return;
+
+    const mainLocationEffectiveOffset = getEffectiveOffsetString(mainAddedIANATimezone);
+    if (mainLocationEffectiveOffset.startsWith('error_')) return;
+
+    let addedCount = 0;
+    for (const loc of allLocations) {
+        if (userTimezones.length >= 24) {
+            showNotification("Reached timezone limit while adding shared locations.", 'info');
+            break; // Stop if limit reached
+        }
+
+        if (loc.iana === mainAddedIANATimezone || userTimezones.some(tz => tz.iana === loc.iana)) {
+            continue; // Skip if it's the main added one or already present
+        }
+
+        const currentLocEffectiveOffset = getEffectiveOffsetString(loc.iana);
+        if (currentLocEffectiveOffset === mainLocationEffectiveOffset) {
+            const newSharedTimezone = { ...loc, userAdded: false, isSharedAddition: true }; // Mark as shared
+            userTimezones.push(newSharedTimezone);
+            addedCount++;
+            console.log(`Auto-added shared location: ${loc.city} (same time as ${mainAddedIANATimezone})`);
+        }
+    }
+
+    if (addedCount > 0) {
+        // await saveUserTimezones(); // Save after adding shared locations - handled by calling function
+        // renderTimezones(); // Will be called by the calling function (handleAddCity)
+        showNotification(`Added ${addedCount} other location(s) sharing the same current time.`, 'success');
+    }
+}
+
+function updateLocationNotFoundMessage(searchTerm) {
+    locationNotFoundMsg.textContent = `Location "${searchTerm}" not found. Try the nearest major city. `;
+    const searchLink = document.createElement('a');
+    searchLink.id = 'search-on-google-link';
+    searchLink.href = `https://www.google.com/search?q=${encodeURIComponent(searchTerm + ' timezone')}`;
+    searchLink.textContent = 'Search on Google';
+    searchLink.target = '_blank';
+    searchLink.rel = 'noopener noreferrer';
+    locationNotFoundMsg.appendChild(searchLink);
 }
 
 // Handle city search input
 function handleCitySearchInput() {
     // Clear not found message when typing
     locationNotFoundMsg.style.display = 'none';
+    const searchTerm = citySearchInput.value.trim().toLowerCase();
+
+    if (searchTerm.length < 2) {
+        citySuggestionsList.innerHTML = '';
+        citySuggestionsList.style.display = 'none';
+        return;
+    }
+
+    const suggestions = allLocations.filter(loc =>
+        loc.city.toLowerCase().includes(searchTerm) ||
+        loc.countryName.toLowerCase().includes(searchTerm) ||
+        loc.iana.toLowerCase().includes(searchTerm)
+    ).slice(0, 10);
+
+    renderSuggestions(suggestions);
+}
+
+function renderSuggestions(suggestions) {
+    citySuggestionsList.innerHTML = '';
+    if (suggestions.length === 0) {
+        citySuggestionsList.style.display = 'none';
+        return;
+    }
+
+    suggestions.forEach(loc => {
+        const li = document.createElement('li');
+        li.textContent = `${loc.city}, ${loc.countryName} (${loc.iana})`;
+        li.dataset.iana = loc.iana;
+        li.dataset.cityName = loc.city;
+        li.addEventListener('mousedown', () => {
+            citySearchInput.value = `${loc.city}, ${loc.countryName}`;
+            citySuggestionsList.style.display = 'none';
+            handleAddCity();
+        });
+        citySuggestionsList.appendChild(li);
+    });
+    citySuggestionsList.style.display = 'block';
 }
 
 // Handle removing a timezone
@@ -290,6 +453,55 @@ async function handleRemoveTimezone(event) {
     userTimezones = userTimezones.filter(tz => tz.iana !== ianaTimezone);
     await saveUserTimezones();
     renderTimezones();
+}
+
+// Add near other utility functions or within init sequence logic
+async function addCurrentSystemTimezone() {
+    try {
+        const systemIANA = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!systemIANA) {
+            console.warn("Could not determine system timezone IANA name.");
+            return;
+        }
+
+        // Check if system timezone is already added by the user or as home
+        const alreadyExists = userTimezones.some(tz => tz.iana === systemIANA);
+        if (alreadyExists) {
+            console.log("System timezone already present in user's list:", systemIANA);
+            // Optionally, mark the existing card if it matches system IANA
+            const existingCard = userTimezones.find(tz => tz.iana === systemIANA);
+            if (existingCard && !existingCard.isSystem) { // Add a flag
+                existingCard.isSystemMarker = true; // This flag can be used for styling
+            }
+            return;
+        }
+
+        const systemLocationData = allLocations.find(loc => loc.iana === systemIANA);
+        if (!systemLocationData) {
+            console.warn(`System timezone "${systemIANA}" not found in locations.json. Cannot add as a card.`);
+            // Optional: could create a basic entry if truly needed, but better to have it in locations.json
+            // showNotification(`Your system timezone (${systemIANA}) is not in our city list.`, 'info');
+            return;
+        }
+
+        // Limit check before adding system timezone
+        if (userTimezones.length >= 24) {
+            showNotification("Maximum of 24 timezones reached, cannot add system timezone automatically.", 'info');
+            return;
+        }
+
+        const systemTimezone = { ...systemLocationData, isSystem: true, userAdded: false }; // userAdded: false to differentiate
+        userTimezones.push(systemTimezone); // Or unshift to put it first/last consistently
+        // No need to call saveUserTimezones() here if we don't want to persist it as a *user choice*
+        // If it should be persistent until removed, then call save. For now, let's make it non-persistent unless saved by other means.
+        // OR, always add it and allow user to remove. If so, then save:
+        // await saveUserTimezones(); 
+        console.log("System timezone added:", systemTimezone);
+        // renderTimezones() will be called by init, or call it if adding dynamically later
+    } catch (error) {
+        console.error("Error adding current system timezone:", error);
+        showNotification("Could not determine or add your system timezone.", 'error');
+    }
 }
 
 // Initialize the extension

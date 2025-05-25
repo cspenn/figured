@@ -1,16 +1,26 @@
 # System Patterns
 
 ## Architecture Overview
-To be determined during initial build phase
+- Manifest V3 Chrome Extension.
+- Primary UI and logic reside in the New Tab page (`newtab.html`, `newtab.css`, `newtab.js`).
+- Service worker (`service-worker.js`) for essential background tasks (e.g., caching).
+- Local JSON file (`locations.json`) as the sole data source for timezone information.
+- User preferences stored via `chrome.storage.local`.
 
 ## Key Technical Decisions
 - Using Memory Bank documentation system (.clinerules)
+- Time updates managed by `setInterval` within `newtab.js` for V1.0/V1.1.
 
 ## Design Patterns
 - Documentation-driven development
 
 ## Component Relationships
-To be determined during initial build phase
+- `manifest.json` references `newtab.html` and `service-worker.js`.
+- `newtab.html` links to `newtab.css` and `newtab.js`.
+- `newtab.js` fetches data from `common/locations.json` and interacts with `chrome.storage.local`.
 
 ## Critical Implementation Paths
-To be determined during initial build phase
+- Timezone data loading and parsing.
+- Real-time display updates of timezone cards.
+- User interaction for adding/removing timezones.
+- Persistence of user settings.

@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="newtab.css">
 </head>
 <body>
+    <div id="notification-area" class="notification-area" style="display: none;">
+        <span id="notification-message"></span>
+        <button id="notification-close-btn" class="notification-close-btn" aria-label="Close notification">&times;</button>
+    </div>
+
     <div id="home-prompt" style="display: none;">
         <h2>Welcome to Figured!</h2>
         <p>Please select your home timezone to get started:</p>
@@ -17,9 +22,10 @@
     <div class="add-timezone-wrapper">
         <input type="text" id="city-search-input" placeholder="Add another timezone...">
         <button id="add-city-btn">Add</button>
-        <div id="location-not-found-msg" style="display: none;">
-            Location not found. <a href="#" id="search-on-google">Search on Google</a>
-        </div>
+    </div>
+    <ul id="city-suggestions-list" class="city-suggestions-list" style="display: none;"></ul>
+    <div id="location-not-found-msg" style="display: none;">
+        Location not found. <a href="#" id="search-on-google-link" target="_blank" rel="noopener noreferrer">Search on Google</a>
     </div>
 
     <div id="timezone-grid">

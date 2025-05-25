@@ -1,16 +1,28 @@
 # Active Context
 
 ## Current Phase
-Initial Build Phase
+Polish Phase
 
 ## Current Focus
-Implementing Figured Chrome Extension per workplan.md
+Testing and refinement of implemented features.
 
 ## Recent Changes
-- Initialized Memory Bank system with all required files
-- Read and analyzed prd.md, workplan.md, and polish.md
-- Confirmed project structure and requirements
+- Updated `docs/prd.md` with FR9.1 clarification and version update.
+- Updated `docs/polish.md` and `docs/systemPatterns.md`.
+- Expanded `figured/common/locations.json` (140 entries).
+- Optimized `figured/service-worker.js` caching strategy.
+- Updated `figured/manifest.json` version.
+- Implemented input sanitization for "Location not found" message in `figured/newtab/newtab.js`.
+- Enhanced error handling for `locations.json` loading in `figured/newtab/newtab.js`.
+- Implemented "Current System" timezone display (FR6) in `figured/newtab/newtab.js`.
+- Implemented "Shared Locations" automatic addition (FR8) in `figured/newtab/newtab.js`.
 
 ## Next Steps
-- Begin implementing Chrome extension files per workplan.md
-- Start with core setup and assets (icons, locations.json)
+Conduct thorough testing of all new features and fixes, including regression and accessibility checks.
+
+## Testing Instructions
+1. Load unpacked extension in Chrome.
+2. Verify all timezone functionality works as per PRD (add/remove cities, home timezone, system timezone, shared locations).
+3. Check console for any errors.
+4. Test edge cases (max timezones, invalid inputs).
+5. Verify styling and responsiveness.
