@@ -33,8 +33,15 @@
         <template id="timezone-card-template">
             <div class="timezone-card">
                 <button class="remove-tz-btn">×</button>
-                <div class="city-name"></div>
-                <div class="country-name"></div>
+                <!-- Container for multiple locations sharing the same IANA for this card -->
+                <div class="locations-container">
+                    <!-- JS will populate this. Example structure for one location:
+                    <div class="location-entry">
+                        <div class="city-name">City Name</div>
+                        <div class="country-name">Country</div>
+                    </div>
+                    -->
+                </div>
                 <div class="current-time">
                     <span class="time-value">HH:MM</span>
                     <span class="am-pm"></span>

@@ -161,21 +161,29 @@ async function handleSetHomeTimezone() {
         return;
     }
 
+    // Find the full location data from allLocations
     const homeLocationData = allLocations.find(loc => loc.iana === selectedIANATimezone);
     if (!homeLocationData) {
         console.error("Selected home location not found in allLocations data:", selectedIANATimezone);
         alert("Error setting home timezone. Data inconsistency.");
         return;
     }
+    
+    // Unset any existing home timezone
+    userTimezones.forEach(tz => tz.isHome = false);
 
-    const homeTimezone = { ...homeLocationData, isHome: true, userAdded: true };
-
-    // Check if already added, update if so, otherwise add
-    const existingIndex = userTimezones.findIndex(tz => tz.iana === homeTimezone.iana);
-    if (existingIndex > -1) {
-        userTimezones[existingIndex].isHome = true;
+    const existingTzCardEntry = userTimezones.find(tz => tz.iana === selectedIANATimezone);
+    if (existingTzCardEntry) {
+        existingTzCardEntry.isHome = true;
     } else {
-        userTimezones.unshift(homeTimezone);
+        // If the IANA zone isn't even on a card yet, create a new card for it and mark as home
+        const newHomeTimezoneCardEntry = {
+            iana: homeLocationData.iana,
+            locations: [{ city: homeLocationData.city, countryName: homeLocationData.countryName, countryCode: homeLocationData.countryCode }],
+            isHome: true,
+            userAdded: true // Since user explicitly set it as home via selection
+        };
+        userTimezones.unshift(newHomeTimezoneCardEntry); // Add to the beginning
     }
 
     await saveUserTimezones();
@@ -183,11 +191,41 @@ async function handleSetHomeTimezone() {
 
     homePrompt.style.display = 'none';
     renderTimezones();
-    console.log("Home timezone set to:", homeTimezone);
+    console.log("Home timezone IANA set to:", selectedIANATimezone);
 }
 
 // Render all timezones to the grid
 function renderTimezones() {
+    const nowForSorting = new Date(); // Use a consistent 'now' for all offset calculations in this sort pass
+
+    // New Sorting Logic: Relative to Home, or fallback
+    const homeTimezoneEntry = userTimezones.find(tz => tz.isHome);
+    const homeIana = homeTimezoneEntry ? homeTimezoneEntry.iana : null;
+
+    userTimezones.sort((a, b) => {
+        if (homeIana) {
+            // Sort relative to home
+            const homeOffsetMinutes = getSortableUtcOffsetInMinutes(homeIana, nowForSorting);
+
+            const offsetA = getSortableUtcOffsetInMinutes(a.iana, nowForSorting);
+            const offsetB = getSortableUtcOffsetInMinutes(b.iana, nowForSorting);
+
+            const relativeOffsetA = offsetA - homeOffsetMinutes;
+            const relativeOffsetB = offsetB - homeOffsetMinutes;
+
+            // If one is home, it should be '0' relative, ensuring it's central among items with same actual offset diff
+            if (a.iana === homeIana) return relativeOffsetB === 0 ? 0 : -1; // Home comes before others if diffs are equal, or sorts by its 0
+            if (b.iana === homeIana) return relativeOffsetA === 0 ? 0 : 1;  // Others come after home if diffs are equal
+
+            return relativeOffsetA - relativeOffsetB; // Ascending by relative difference
+        } else {
+            // Fallback sort: furthest ahead (largest positive offset) to furthest behind (smallest negative offset).
+            const offsetA = getSortableUtcOffsetInMinutes(a.iana, nowForSorting);
+            const offsetB = getSortableUtcOffsetInMinutes(b.iana, nowForSorting);
+            return offsetB - offsetA; // Descending by absolute offset
+        }
+    });
+
     timezoneGrid.innerHTML = '';
 
     if (!userTimezones || userTimezones.length === 0) {
@@ -195,28 +233,71 @@ function renderTimezones() {
         return;
     }
 
-    userTimezones.forEach(tzData => {
+    userTimezones.forEach(tzData => { // tzData is now an object like { iana: "...", locations: [...] }
         if (!timezoneCardTemplate) {
             console.error("Timezone card template not found!");
             return;
         }
+        if (!tzData.iana || !tzData.locations || tzData.locations.length === 0) {
+            console.error("Invalid tzData structure in renderTimezones:", tzData);
+            return;
+        }
+
         const cardClone = timezoneCardTemplate.content.cloneNode(true);
         const cardElement = cardClone.querySelector('.timezone-card');
-        
-        // Populate basic info
-        cardElement.querySelector('.city-name').textContent = tzData.city || 'N/A';
-        cardElement.querySelector('.country-name').textContent = tzData.countryName || tzData.countryCode || 'N/A';
+        const locationsContainer = cardElement.querySelector('.locations-container');
+        locationsContainer.innerHTML = ''; // Clear any template placeholders
 
-        // Add class for system timezone if applicable
-        cardElement.classList.toggle('system-timezone-card', tzData.isSystem || tzData.isSystemMarker);
+        // Create indicator spans (once per card)
+        const homeIndicatorSpan = document.createElement('span');
+        homeIndicatorSpan.className = 'home-indicator';
+        homeIndicatorSpan.textContent = '🏠';
+        if (tzData.isHome) homeIndicatorSpan.style.display = 'inline'; else homeIndicatorSpan.style.display = 'none';
 
-        // Update with current time
+        const systemIndicatorSpan = document.createElement('span');
+        systemIndicatorSpan.className = 'system-indicator';
+        systemIndicatorSpan.textContent = '🕰️';
+        if (tzData.isSystemMarker) systemIndicatorSpan.style.display = 'inline'; else systemIndicatorSpan.style.display = 'none';
+
+        tzData.locations.forEach((loc, index) => { // Get index
+            const locationEntryDiv = document.createElement('div');
+            locationEntryDiv.classList.add('location-entry');
+
+            const cityNameWrapper = document.createElement('div'); // Optional wrapper
+            cityNameWrapper.classList.add('city-name-wrapper');
+
+
+            const cityNameDiv = document.createElement('div');
+            cityNameDiv.classList.add('city-name');
+            cityNameDiv.textContent = loc.city || 'N/A';
+
+            // Prepend indicators to the first city's name wrapper
+            if (index === 0) { // Only for the first location listed on the card
+                cityNameWrapper.appendChild(homeIndicatorSpan); // Appending the actual span, not a clone
+                cityNameWrapper.appendChild(systemIndicatorSpan);
+            }
+            cityNameWrapper.appendChild(cityNameDiv);
+            locationEntryDiv.appendChild(cityNameWrapper);
+
+
+            const countryNameDiv = document.createElement('div');
+            countryNameDiv.classList.add('country-name');
+            countryNameDiv.textContent = `${loc.countryName || ''} (${loc.countryCode || 'N/A'})`;
+            locationEntryDiv.appendChild(countryNameDiv);
+
+            locationsContainer.appendChild(locationEntryDiv);
+        });
+
+        // Add class for system timezone if applicable to the card
+        cardElement.classList.toggle('system-timezone-card', tzData.isSystemMarker); // isSystemMarker applies to the IANA card
+
+        // Update with current time - pass the whole tzData (which includes IANA)
         updateTimezoneCard(cardElement, tzData, new Date());
 
-        // Setup remove button
+        // Setup remove button - it removes the entire IANA card
         const removeBtn = cardElement.querySelector('.remove-tz-btn');
         if (removeBtn) {
-            removeBtn.dataset.iana = tzData.iana;
+            removeBtn.dataset.iana = tzData.iana; // Removing is by IANA
             removeBtn.addEventListener('click', handleRemoveTimezone);
         }
 
@@ -227,8 +308,18 @@ function renderTimezones() {
 // Update a single timezone card with current time data
 function updateTimezoneCard(cardElement, timezoneData, now) {
     try {
-        const optionsTime = { timeZone: timezoneData.iana, hour: 'numeric', minute: 'numeric', hour12: true };
-        const optionsDate = { timeZone: timezoneData.iana, weekday: 'short', month: 'short', day: 'numeric' };
+        // timezoneData now is { iana: "...", locations: [{city:"...", countryName:"..."}], ... }
+        if (!timezoneData || !timezoneData.iana || typeof timezoneData.iana !== 'string') {
+            console.error("Invalid timezoneData or missing/invalid IANA in updateTimezoneCard:", timezoneData);
+            // Fallback content setters with null checks
+            const fallbackTime = cardElement.querySelector('.time-value'); 
+            if (fallbackTime) fallbackTime.textContent = "Error";
+            // ... other fallbacks ...
+            return;
+        }
+        const cleanIana = timezoneData.iana.trim(); // IANA is at the top level of tzData
+        const optionsTime = { timeZone: cleanIana, hour: 'numeric', minute: 'numeric', hour12: true };
+        const optionsDate = { timeZone: cleanIana, weekday: 'short', month: 'short', day: 'numeric' };
 
         // Format time
         const timeFormatter = new Intl.DateTimeFormat(navigator.language, optionsTime);
@@ -240,7 +331,8 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         if (timeValueElement) {
             timeValueElement.textContent = timeValue;
         } else {
-            console.error("Element with class '.time-value' not found in card for:", timezoneData.city);
+            // Use IANA for logging as city is now an array
+            console.error("Element with class '.time-value' not found in card for IANA:", cleanIana);
         }
     
         // Target the '.am-pm' span
@@ -248,7 +340,7 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         if (amPmElement) {
             amPmElement.textContent = amPmValue;
         } else {
-            // console.warn("Element with class '.am-pm' not found in card for:", timezoneData.city);
+            // console.warn("Element with class '.am-pm' not found in card for IANA:", cleanIana);
         }
             
         // Format date
@@ -257,15 +349,15 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         if (dateElement) {
             dateElement.textContent = dateFormatter.format(now);
         } else {
-            console.error("Element with class '.current-date' not found for:", timezoneData.city);
+            console.error("Element with class '.current-date' not found for IANA:", cleanIana);
         }
     
         // Timezone abbreviation and UTC offset
-        const tzAbbr = new Intl.DateTimeFormat(navigator.language, {timeZone: timezoneData.iana, timeZoneName: 'short'}).formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'N/A';
+        const tzAbbr = new Intl.DateTimeFormat(navigator.language, {timeZone: cleanIana, timeZoneName: 'short'}).formatToParts(now).find(p => p.type === 'timeZoneName')?.value || 'N/A';
         
         let formattedUtcOffset = 'N/A';
         try {
-            const offsetParts = new Intl.DateTimeFormat('en-US', {timeZone: timezoneData.iana, timeZoneName: 'longOffset'}).formatToParts(now);
+            const offsetParts = new Intl.DateTimeFormat('en-US', {timeZone: cleanIana, timeZoneName: 'longOffset'}).formatToParts(now);
             const offsetStringPart = offsetParts.find(p => p.type === 'timeZoneName'); // find the part object
             if (offsetStringPart) {
                 const offsetStringValue = offsetStringPart.value;
@@ -276,7 +368,7 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
                 }
             } // else formattedUtcOffset remains 'N/A' if part not found
         } catch (e) {
-            console.error(`Error getting longOffset for ${timezoneData.iana}:`, e);
+            console.error(`Error getting longOffset for ${cleanIana}:`, e);
             // formattedUtcOffset remains 'N/A'
         }
     
@@ -284,28 +376,28 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         if (tzAbbrElement) {
             tzAbbrElement.textContent = tzAbbr;
         } else {
-            console.error("Element with class '.tz-abbr' not found for:", timezoneData.city);
+            console.error("Element with class '.tz-abbr' not found for IANA:", cleanIana);
         }
     
         const utcOffsetElement = cardElement.querySelector('.utc-offset');
         if (utcOffsetElement) {
             utcOffsetElement.textContent = formattedUtcOffset;
         } else {
-            console.error("Element with class '.utc-offset' not found for:", timezoneData.city);
+            console.error("Element with class '.utc-offset' not found for IANA:", cleanIana);
         }
     
         // DST indicator
-        const dstCheckFormatter = new Intl.DateTimeFormat('en-US', { timeZone: timezoneData.iana, timeZoneName: 'long' });
+        const dstCheckFormatter = new Intl.DateTimeFormat('en-US', { timeZone: cleanIana, timeZoneName: 'long' });
         const isDST = dstCheckFormatter.format(now).toLowerCase().includes('daylight');
         const dstIndicator = cardElement.querySelector('.dst-indicator');
         if (dstIndicator) {
             dstIndicator.style.display = isDST ? 'inline' : 'none';
         } else {
-            console.error("Element with class '.dst-indicator' not found for:", timezoneData.city);
+            console.error("Element with class '.dst-indicator' not found for IANA:", cleanIana);
         }
             
-        // Set day/night color
-        const hourInZone = new Date(now.toLocaleString('en-US', {timeZone: timezoneData.iana})).getHours();
+        // Set day/night color based on the IANA zone's hour
+        const hourInZone = new Date(now.toLocaleString('en-US', {timeZone: cleanIana})).getHours();
         cardElement.classList.remove('day', 'evening', 'night');
         if (hourInZone >= 6 && hourInZone < 18) {
             cardElement.classList.add('day');
@@ -316,7 +408,8 @@ function updateTimezoneCard(cardElement, timezoneData, now) {
         }
 
     } catch (error) {
-        console.error(`Error updating card for ${timezoneData.city} (IANA: ${timezoneData.iana}):`, error);
+        // Log primary city if available, or just IANA
+        console.error(`Error updating card for IANA ${timezoneData?.iana?.trim()} (Primary city: ${timezoneData?.locations?.[0]?.city}):`, error);
         // Fallback content setters with null checks
         const fallbackTime = cardElement.querySelector('.time-value'); // Target specific element
         if (fallbackTime) fallbackTime.textContent = "Error";
@@ -356,109 +449,161 @@ function updateAllDisplayedTimes() {
 // Handle adding a new city
 async function handleAddCity() {
     console.log('[Figured] handleAddCity triggered. Input value:', citySearchInput.value);
-    const selectedCityName = citySearchInput.value.trim();
-    if (!selectedCityName) {
+    const searchInputValue = citySearchInput.value.trim();
+    if (!searchInputValue) {
         locationNotFoundMsg.style.display = 'none';
         return;
     }
 
-    const foundLocation = allLocations.find(loc => 
-        loc.city.toLowerCase() === selectedCityName.toLowerCase() || 
-        `${loc.city}, ${loc.countryName}`.toLowerCase() === selectedCityName.toLowerCase() ||
-        loc.iana === selectedCityName
-    );
+    const foundLocation = allLocations.find(loc => {
+        const searchTermLower = searchInputValue.toLowerCase();
+        // Check city, "city, country", and IANA (case-insensitive for search, then case-sensitive for direct IANA match)
+        return (loc.city && loc.city.toLowerCase().includes(searchTermLower)) || // Broader search for suggestions
+               (loc.countryName && `${loc.city}, ${loc.countryName}`.toLowerCase().includes(searchTermLower)) ||
+               (loc.iana && loc.iana.toLowerCase().includes(searchTermLower)) ||
+               (loc.iana === searchInputValue); // Allow direct IANA input
+    });
 
     if (!foundLocation) {
-        updateLocationNotFoundMessage(selectedCityName); // This will set the text content
-        console.log('[Figured] Location not found, displaying message for:', selectedCityName);
+        updateLocationNotFoundMessage(searchInputValue);
+        console.log('[Figured] Location not found, displaying message for:', searchInputValue);
         locationNotFoundMsg.style.display = 'block';
         return;
     }
 
     locationNotFoundMsg.style.display = 'none';
 
-    // Check timezone limit (max 24)
-    if (userTimezones.length >= 24) {
-        showNotification("Maximum of 24 timezones reached.", 'error');
-        return;
-    }
+    // Check if the IANA timezone of the found location is already in userTimezones
+    const existingTzCardEntry = userTimezones.find(tz => tz.iana === foundLocation.iana);
 
-    // Check if already added
-    const alreadyAdded = userTimezones.some(tz => tz.iana === foundLocation.iana);
-    if (alreadyAdded) {
-        showNotification(`${foundLocation.city} is already in your timezone list.`, 'info');
+    if (existingTzCardEntry) {
+        // IANA zone already exists on a card. Add this city to its list of locations, if not already present.
+        const cityAlreadyOnThisCard = existingTzCardEntry.locations.some(
+            locOnCard => locOnCard.city.toLowerCase() === foundLocation.city.toLowerCase() &&
+                         locOnCard.countryCode === foundLocation.countryCode // Use countryCode for more precise match
+        );
+
+        if (!cityAlreadyOnThisCard) {
+            existingTzCardEntry.locations.push({
+                city: foundLocation.city,
+                countryName: foundLocation.countryName,
+                countryCode: foundLocation.countryCode
+                // lat/lon from foundLocation can be added if needed by other features
+            });
+            await saveUserTimezones();
+            renderTimezones(); // Re-render to update the existing card
+            showNotification(`Added ${foundLocation.city} to the card for ${foundLocation.iana}.`, 'success');
+        } else {
+            showNotification(`${foundLocation.city} is already listed on the card for ${foundLocation.iana}.`, 'info');
+        }
         citySearchInput.value = '';
         citySuggestionsList.style.display = 'none';
         return;
     }
 
-    // Add to user's timezones
-    const newTimezone = { ...foundLocation, userAdded: true };
-    userTimezones.push(newTimezone);
-    // await saveUserTimezones(); // Save will happen after shared locations or if none are added
+    // This IANA zone is new to the user's display. Create a new card entry.
+    // Check timezone card limit (max 24 distinct IANA cards)
+    if (userTimezones.length >= 24) {
+        showNotification("Maximum of 24 timezone cards reached. Cannot add new IANA zone.", 'error');
+        return;
+    }
 
-    // Clear search before potentially lengthy shared location search
-    const addedCityName = foundLocation.city; // Store name before clearing input
-    const addedCityIANA = foundLocation.iana;
+    const newTimezoneCardEntry = {
+        iana: foundLocation.iana,
+        locations: [{ // Initialize with the first location for this new IANA card
+            city: foundLocation.city,
+            countryName: foundLocation.countryName,
+            countryCode: foundLocation.countryCode
+            // lat: foundLocation.lat, 
+            // lon: foundLocation.lon
+        }],
+        isHome: false, // Default, can be changed later
+        userAdded: true, // This card was initiated by user adding a city
+        isSystemMarker: false // Default
+    };
+    userTimezones.push(newTimezoneCardEntry);
+
     citySearchInput.value = '';
     citySuggestionsList.style.display = 'none';
     
-    await findAndAddSharedLocations(addedCityIANA); // Call the new function
-    
-    await saveUserTimezones(); // Save all additions (primary + shared)
+    // The call to findAndAddSharedLocations is now removed.
+
+    await saveUserTimezones();
     renderTimezones();
-    showNotification(`Added ${addedCityName} to your timezones.`, 'success');
+    showNotification(`Added new card for ${foundLocation.city} (${foundLocation.iana}).`, 'success');
 }
 
 // Function to get effective offset string (UTC and DST considered)
 function getEffectiveOffsetString(iana) {
     try {
+        if (!iana || typeof iana !== 'string') {
+            console.error(`Invalid IANA input to getEffectiveOffsetString: ${iana}`);
+            return `error_invalid_input`;
+        }
+        const cleanIana = iana.trim(); // Trim the IANA string
         const now = new Date();
         // Using longOffset to capture full offset including minutes, and timeZoneName for DST info.
         const parts = new Intl.DateTimeFormat('en-US', {
-            timeZone: iana,
+            timeZone: cleanIana, // Use the cleaned IANA string
             timeZoneName: 'longOffset'
         }).formatToParts(now);
         const offsetPart = parts.find(p => p.type === 'timeZoneName');
-        return offsetPart ? offsetPart.value : new Date(now.toLocaleString('en-US', {timeZone: iana})).getTimezoneOffset().toString(); // Fallback
+        if (offsetPart && offsetPart.value) {
+            return offsetPart.value; // e.g., "GMT-07:00"
+        }
+        console.warn(`Could not determine offset string for ${cleanIana}.`);
+        return `error_offset_unavailable_${cleanIana}`; // More specific error
     } catch (e) {
-        console.error(`Error getting effective offset for ${iana}:`, e);
-        return `error_${iana}`; // Ensure non-match on error
+        console.error(`Error getting effective offset for ${iana.trim()}:`, e);
+        return `error_exception_${iana.trim()}`; // Ensure non-match on error
     }
 }
 
-async function findAndAddSharedLocations(mainAddedIANATimezone) {
-    if (!allLocations || allLocations.length === 0) return;
+// Add this new function somewhere near other utility functions
 
-    const mainLocationEffectiveOffset = getEffectiveOffsetString(mainAddedIANATimezone);
-    if (mainLocationEffectiveOffset.startsWith('error_')) return;
-
-    let addedCount = 0;
-    for (const loc of allLocations) {
-        if (userTimezones.length >= 24) {
-            showNotification("Reached timezone limit while adding shared locations.", 'info');
-            break; // Stop if limit reached
+/**
+ * Calculates the UTC offset in minutes for a given IANA timezone.
+ * Positive for zones ahead of UTC, negative for zones behind.
+ * @param {string} iana The IANA timezone string.
+ * @param {Date} now The current date object to calculate offset against.
+ * @returns {number} The offset in minutes, or -Infinity/Infinity for errors to aid sorting.
+ */
+function getSortableUtcOffsetInMinutes(iana, now = new Date()) {
+    try {
+        if (!iana || typeof iana !== 'string') {
+            console.error(`Invalid IANA input to getSortableUtcOffsetInMinutes: ${iana}`);
+            return -Infinity; // Push to one end
         }
+        const cleanIana = iana.trim();
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: cleanIana,
+            timeZoneName: 'longOffset' // e.g., GMT+05:30, GMT-08:00, GMT
+        });
+        const parts = formatter.formatToParts(now);
+        const offsetStringPart = parts.find(p => p.type === 'timeZoneName');
 
-        if (loc.iana === mainAddedIANATimezone || userTimezones.some(tz => tz.iana === loc.iana)) {
-            continue; // Skip if it's the main added one or already present
+        if (offsetStringPart && offsetStringPart.value) {
+            const gmtValue = offsetStringPart.value; // "GMT", "GMT+X", "GMT-X", "GMT+X:Y", "GMT-X:Y"
+
+            if (gmtValue === "GMT") return 0; // UTC itself
+
+            const offsetMatch = gmtValue.match(/GMT([+-])(\d{1,2})(?::(\d{2}))?/);
+            if (offsetMatch) {
+                const sign = offsetMatch[1] === '+' ? 1 : -1;
+                const hours = parseInt(offsetMatch[2], 10);
+                const minutesPart = offsetMatch[3] ? parseInt(offsetMatch[3], 10) : 0;
+                return sign * (hours * 60 + minutesPart);
+            }
         }
-
-        const currentLocEffectiveOffset = getEffectiveOffsetString(loc.iana);
-        if (currentLocEffectiveOffset === mainLocationEffectiveOffset) {
-            const newSharedTimezone = { ...loc, userAdded: false, isSharedAddition: true }; // Mark as shared
-            userTimezones.push(newSharedTimezone);
-            addedCount++;
-            console.log(`Auto-added shared location: ${loc.city} (same time as ${mainAddedIANATimezone})`);
-        }
-    }
-
-    if (addedCount > 0) {
-        // await saveUserTimezones(); // Save after adding shared locations - handled by calling function
-        // renderTimezones(); // Will be called by the calling function (handleAddCity)
-        showNotification(`Added ${addedCount} other location(s) sharing the same current time.`, 'success');
+        console.warn(`Could not parse offset for ${cleanIana} from "${offsetStringPart?.value}" in getSortableUtcOffsetInMinutes. Defaulting sort order.`);
+        return -Infinity; // Push to one end if unparsable or format is unexpected
+    } catch (e) {
+        // This catch is important if the IANA name itself is invalid (e.g., after trim but still bad)
+        console.error(`Error in getSortableUtcOffsetInMinutes for IANA '${iana}': ${e.message}. This might indicate an invalid IANA name in locations.json.`);
+        return -Infinity; // If IANA is invalid, push to one end
     }
 }
+
 
 function updateLocationNotFoundMessage(searchTerm) {
     locationNotFoundMsg.textContent = `Location "${searchTerm}" not found. Try the nearest major city. `;
@@ -474,11 +619,16 @@ function updateLocationNotFoundMessage(searchTerm) {
 // Handle city search input
 function handleCitySearchInput() {
     console.log('[Figured] handleCitySearchInput triggered.');
-    // Clear not found message when typing
     locationNotFoundMsg.style.display = 'none';
     const searchTerm = citySearchInput.value.trim().toLowerCase();
     console.log('[Figured] Search Term:', searchTerm);
 
+    if (allLocations.length === 0) {
+        console.warn('[Figured] Warning: allLocations array is empty during city search. Data might not have loaded.');
+        citySuggestionsList.innerHTML = '';
+        citySuggestionsList.style.display = 'none';
+        return;
+    }
     if (searchTerm.length < 2) {
         citySuggestionsList.innerHTML = '';
         citySuggestionsList.style.display = 'none';
@@ -486,13 +636,20 @@ function handleCitySearchInput() {
         return;
     }
 
-    const suggestions = allLocations.filter(loc =>
-        loc.city.toLowerCase().includes(searchTerm) ||
-        loc.countryName.toLowerCase().includes(searchTerm) ||
-        loc.iana.toLowerCase().includes(searchTerm)
-    ).slice(0, 10);
-    console.log('[Figured] Suggestions found:', suggestions);
+    const suggestions = allLocations.filter(loc => {
+        const cityMatch = loc.city && loc.city.toLowerCase().includes(searchTerm);
+        const countryMatch = loc.countryName && loc.countryName.toLowerCase().includes(searchTerm);
+        const ianaMatch = loc.iana && loc.iana.toLowerCase().includes(searchTerm);
+        return cityMatch || countryMatch || ianaMatch;
+    }).slice(0, 10); // Limit to 10 suggestions
 
+    console.log(`[Figured] Suggestions found for "${searchTerm}":`, suggestions.length, suggestions);
+    // Detailed check if "Boston" is specifically being missed by the filter:
+    if (searchTerm === "boston") {
+        const bostonExplicitCheck = allLocations.find(loc => loc.city && loc.city.toLowerCase() === "boston");
+        console.log('[Figured] Explicit check for Boston in allLocations:', bostonExplicitCheck);
+    }
+    
     renderSuggestions(suggestions);
 }
 
@@ -549,16 +706,15 @@ async function addCurrentSystemTimezone() {
             return;
         }
 
-        const alreadyExistingEntry = userTimezones.find(tz => tz.iana === systemIANA);
-        if (alreadyExistingEntry) {
+        const existingSystemTzCard = userTimezones.find(tz => tz.iana === systemIANA);
+        if (existingSystemTzCard) {
             console.log("System timezone already present in user's list:", systemIANA);
-            if (!alreadyExistingEntry.isSystemMarker && !alreadyExistingEntry.isSystem) { // Check if not already marked
-                alreadyExistingEntry.isSystemMarker = true; 
-                // If this change should trigger a re-render immediately:
+            // Ensure it's marked as system, even if user added it manually before
+            if (!existingSystemTzCard.isSystemMarker) {
+                existingSystemTzCard.isSystemMarker = true;
+                // Potentially save and re-render if this state needs to persist & reflect immediately
+                // await saveUserTimezones();
                 // renderTimezones(); 
-                // Note: init() calls renderTimezones() after this, so it might be covered.
-                // Consider if saveUserTimezones() is needed if isSystemMarker is persisted.
-                // For now, isSystemMarker is primarily for styling during the current session.
             }
             return; // Stop further processing to avoid adding a duplicate
         }
@@ -568,22 +724,24 @@ async function addCurrentSystemTimezone() {
             console.warn(`System timezone "${systemIANA}" not found in locations.json. Cannot add as a card.`);
             // Optional: could create a basic entry if truly needed, but better to have it in locations.json
             // showNotification(`Your system timezone (${systemIANA}) is not in our city list.`, 'info');
-            return;
+            return; // Cannot add if not in our master list
         }
 
-        // Limit check before adding system timezone
+        // Limit check before adding system timezone card
         if (userTimezones.length >= 24) {
             showNotification("Maximum of 24 timezones reached, cannot add system timezone automatically.", 'info');
             return;
         }
 
-        const systemTimezone = { ...systemLocationData, isSystem: true, userAdded: false, isSystemMarker: true }; // Ensure isSystemMarker is also true
-        userTimezones.push(systemTimezone); // Or unshift to put it first/last consistently
+        const systemTimezoneCardEntry = {
+            iana: systemLocationData.iana,
+            locations: [{ city: systemLocationData.city, countryName: systemLocationData.countryName, countryCode: systemLocationData.countryCode }],
+            isSystemMarker: true, // Mark it as the system's current timezone card
+            userAdded: false // Not directly added by user search (though it might be if they search for it)
+        };
+        userTimezones.push(systemTimezoneCardEntry); // Or unshift to place it consistently
         // No need to call saveUserTimezones() here if we don't want to persist it as a *user choice*
-        // If it should be persistent until removed, then call save. For now, let's make it non-persistent unless saved by other means.
-        // OR, always add it and allow user to remove. If so, then save:
-        // await saveUserTimezones(); 
-        console.log("System timezone added:", systemTimezone);
+        console.log("System timezone IANA card added:", systemIANA);
         // renderTimezones() will be called by init, or call it if adding dynamically later
     } catch (error) {
         console.error("Error adding current system timezone:", error);

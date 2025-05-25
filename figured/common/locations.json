@@ -2998,5 +2998,1501 @@
     "iana": "Indian/Mahe",
     "lat": null,
     "lon": null
+  },
+  {
+    "city": "Boston",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": 42.3601,
+    "lon": -71.0589
+  },
+  {
+    "city": "Wuhan",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nagoya",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ahmedabad",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kuala Lumpur",
+    "countryCode": "MYS",
+    "countryName": "Malaysia",
+    "iana": "Asia/Kuala_Lumpur",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Alexandria",
+    "countryCode": "EGY",
+    "countryName": "Egypt",
+    "iana": "Africa/Cairo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Saint Petersburg",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Surat",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ankara",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nanjing",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hangzhou",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Xi'an",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Pune",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Belo Horizonte",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Guadalajara",
+    "countryCode": "MEX",
+    "countryName": "Mexico",
+    "iana": "America/Mexico_City",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Miami",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Atlanta",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Philadelphia",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Washington",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Dallas",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Houston",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Surabaya",
+    "countryCode": "IDN",
+    "countryName": "Indonesia",
+    "iana": "Asia/Jakarta",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Bandung",
+    "countryCode": "IDN",
+    "countryName": "Indonesia",
+    "iana": "Asia/Jakarta",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Luanda",
+    "countryCode": "AGO",
+    "countryName": "Angola",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Accra",
+    "countryCode": "GHA",
+    "countryName": "Ghana",
+    "iana": "Africa/Accra",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Cape Town",
+    "countryCode": "ZAF",
+    "countryName": "South Africa",
+    "iana": "Africa/Johannesburg",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Jeddah",
+    "countryCode": "SAU",
+    "countryName": "Saudi Arabia",
+    "iana": "Asia/Riyadh",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kanpur",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Jaipur",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Faisalabad",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Chittagong",
+    "countryCode": "BGD",
+    "countryName": "Bangladesh",
+    "iana": "Asia/Dhaka",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Harbin",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Shenyang",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Qingdao",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Dalian",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Jinan",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Zhengzhou",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Changchun",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Suzhou",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Fuzhou",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hefei",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Shijiazhuang",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Taiyuan",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kunming",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Xiamen",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Changsha",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Wuxi",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nanning",
+    "countryCode": "CHN",
+    "countryName": "China",
+    "iana": "Asia/Shanghai",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Lucknow",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Bhopal",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ludhiana",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Agra",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nashik",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Vadodara",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Patna",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ghaziabad",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Indore",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Thane",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Medan",
+    "countryCode": "IDN",
+    "countryName": "Indonesia",
+    "iana": "Asia/Jakarta",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Rawalpindi",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Multan",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hyderabad (Pakistan)",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Gujranwala",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Peshawar",
+    "countryCode": "PAK",
+    "countryName": "Pakistan",
+    "iana": "Asia/Karachi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Busan",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Mashhad",
+    "countryCode": "IRN",
+    "countryName": "Iran",
+    "iana": "Asia/Tehran",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Isfahan",
+    "countryCode": "IRN",
+    "countryName": "Iran",
+    "iana": "Asia/Tehran",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Shiraz",
+    "countryCode": "IRN",
+    "countryName": "Iran",
+    "iana": "Asia/Tehran",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Tabriz",
+    "countryCode": "IRN",
+    "countryName": "Iran",
+    "iana": "Asia/Tehran",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Karaj",
+    "countryCode": "IRN",
+    "countryName": "Iran",
+    "iana": "Asia/Tehran",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Addis Ababa",
+    "countryCode": "ETH",
+    "countryName": "Ethiopia",
+    "iana": "Africa/Addis_Ababa",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Dar es Salaam",
+    "countryCode": "TZA",
+    "countryName": "Tanzania",
+    "iana": "Africa/Dar_es_Salaam",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kano",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ibadan",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Durban",
+    "countryCode": "ZAF",
+    "countryName": "South Africa",
+    "iana": "Africa/Johannesburg",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Port Harcourt",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Abuja",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Birmingham",
+    "countryCode": "GBR",
+    "countryName": "United Kingdom",
+    "iana": "Europe/London",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Manchester",
+    "countryCode": "GBR",
+    "countryName": "United Kingdom",
+    "iana": "Europe/London",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hamburg",
+    "countryCode": "DEU",
+    "countryName": "Germany",
+    "iana": "Europe/Berlin",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Munich",
+    "countryCode": "DEU",
+    "countryName": "Germany",
+    "iana": "Europe/Berlin",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Milan",
+    "countryCode": "ITA",
+    "countryName": "Italy",
+    "iana": "Europe/Rome",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Naples",
+    "countryCode": "ITA",
+    "countryName": "Italy",
+    "iana": "Europe/Rome",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Turin",
+    "countryCode": "ITA",
+    "countryName": "Italy",
+    "iana": "Europe/Rome",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Marseille",
+    "countryCode": "FRA",
+    "countryName": "France",
+    "iana": "Europe/Paris",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Valencia",
+    "countryCode": "ESP",
+    "countryName": "Spain",
+    "iana": "Europe/Madrid",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Seville",
+    "countryCode": "ESP",
+    "countryName": "Spain",
+    "iana": "Europe/Madrid",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kazan",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nizhny Novgorod",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Chelyabinsk",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Asia/Yekaterinburg",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ufa",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Asia/Yekaterinburg",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Rostov-on-Don",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Perm",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Asia/Yekaterinburg",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "San Francisco",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Los_Angeles",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Seattle",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Los_Angeles",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "San Diego",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Los_Angeles",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Minneapolis",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Tampa",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Baltimore",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "St. Louis",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Montreal",
+    "countryCode": "CAN",
+    "countryName": "Canada",
+    "iana": "America/Toronto",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Medellin",
+    "countryCode": "COL",
+    "countryName": "Colombia",
+    "iana": "America/Bogota",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Porto Alegre",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Recife",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Recife",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Salvador (Brazil)",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Bahia",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Curitiba",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Campinas",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Brasilia",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hanoi",
+    "countryCode": "VNM",
+    "countryName": "Vietnam",
+    "iana": "Asia/Ho_Chi_Minh",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Quezon City",
+    "countryCode": "PHL",
+    "countryName": "Philippines",
+    "iana": "Asia/Manila",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Caloocan",
+    "countryCode": "PHL",
+    "countryName": "Philippines",
+    "iana": "Asia/Manila",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Davao City",
+    "countryCode": "PHL",
+    "countryName": "Philippines",
+    "iana": "Asia/Manila",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Izmir",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Bursa",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Adana",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Gaziantep",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Adana",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Aleppo",
+    "countryCode": "SYR",
+    "countryName": "Syria",
+    "iana": "Asia/Damascus",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Antalya",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Baku",
+    "countryCode": "AZE",
+    "countryName": "Azerbaijan",
+    "iana": "Asia/Baku",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Bamako",
+    "countryCode": "MLI",
+    "countryName": "Mali",
+    "iana": "Africa/Bamako",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Barranquilla",
+    "countryCode": "COL",
+    "countryName": "Colombia",
+    "iana": "America/Bogota",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Belem",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Belem",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Benin City",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Brazzaville",
+    "countryCode": "COG",
+    "countryName": "Congo - Brazzaville",
+    "iana": "Africa/Brazzaville",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Cali",
+    "countryCode": "COL",
+    "countryName": "Colombia",
+    "iana": "America/Bogota",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Cebu City",
+    "countryCode": "PHL",
+    "countryName": "Philippines",
+    "iana": "Asia/Manila",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Changwon",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Charlotte",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Chiclayo",
+    "countryCode": "PER",
+    "countryName": "Peru",
+    "iana": "America/Lima",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Chisinau",
+    "countryCode": "MDA",
+    "countryName": "Moldova",
+    "iana": "Europe/Chisinau",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Coimbatore",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Conakry",
+    "countryCode": "GIN",
+    "countryName": "Guinea",
+    "iana": "Africa/Conakry",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Daegu",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Daejeon",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Dnipro",
+    "countryCode": "UKR",
+    "countryName": "Ukraine",
+    "iana": "Europe/Kyiv",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Donetsk",
+    "countryCode": "UKR",
+    "countryName": "Ukraine",
+    "iana": "Europe/Kyiv",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Douala",
+    "countryCode": "CMR",
+    "countryName": "Cameroon",
+    "iana": "Africa/Douala",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "El Paso",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Denver",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Fort Worth",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Fukuoka",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Goyang",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Gwangju",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Hiroshima",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Incheon",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Jacksonville",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/New_York",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kaduna",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kampala",
+    "countryCode": "UGA",
+    "countryName": "Uganda",
+    "iana": "Africa/Kampala",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kharkiv",
+    "countryCode": "UKR",
+    "countryName": "Ukraine",
+    "iana": "Europe/Kyiv",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kitakyushu",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kobe",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Konya",
+    "countryCode": "TUR",
+    "countryName": "Turkey",
+    "iana": "Europe/Istanbul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Krakow",
+    "countryCode": "POL",
+    "countryName": "Poland",
+    "iana": "Europe/Warsaw",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kumasi",
+    "countryCode": "GHA",
+    "countryName": "Ghana",
+    "iana": "Africa/Accra",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Kyoto",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Lodz",
+    "countryCode": "POL",
+    "countryName": "Poland",
+    "iana": "Europe/Warsaw",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Lubumbashi",
+    "countryCode": "COD",
+    "countryName": "Congo - Kinshasa",
+    "iana": "Africa/Lubumbashi",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Lusaka",
+    "countryCode": "ZMB",
+    "countryName": "Zambia",
+    "iana": "Africa/Lusaka",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Maracaibo",
+    "countryCode": "VEN",
+    "countryName": "Venezuela",
+    "iana": "America/Caracas",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Meknes",
+    "countryCode": "MAR",
+    "countryName": "Morocco",
+    "iana": "Africa/Casablanca",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Mogadishu",
+    "countryCode": "SOM",
+    "countryName": "Somalia",
+    "iana": "Africa/Mogadishu",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Mosul",
+    "countryCode": "IRQ",
+    "countryName": "Iraq",
+    "iana": "Asia/Baghdad",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Nagpur",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Novocherkassk",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Odesa",
+    "countryCode": "UKR",
+    "countryName": "Ukraine",
+    "iana": "Europe/Kyiv",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Oran",
+    "countryCode": "DZA",
+    "countryName": "Algeria",
+    "iana": "Africa/Algiers",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Palembang",
+    "countryCode": "IDN",
+    "countryName": "Indonesia",
+    "iana": "Asia/Jakarta",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Phnom Penh",
+    "countryCode": "KHM",
+    "countryName": "Cambodia",
+    "iana": "Asia/Phnom_Penh",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Port Said",
+    "countryCode": "EGY",
+    "countryName": "Egypt",
+    "iana": "Africa/Cairo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Quito",
+    "countryCode": "ECU",
+    "countryName": "Ecuador",
+    "iana": "America/Guayaquil",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Rabat",
+    "countryCode": "MAR",
+    "countryName": "Morocco",
+    "iana": "Africa/Casablanca",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "San Antonio",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "San Jose",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Los_Angeles",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Santa Cruz de la Sierra",
+    "countryCode": "BOL",
+    "countryName": "Bolivia",
+    "iana": "America/La_Paz",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Sapporo",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Sendai",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Shubra El-Kheima",
+    "countryCode": "EGY",
+    "countryName": "Egypt",
+    "iana": "Africa/Cairo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Suwon",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Tegucigalpa",
+    "countryCode": "HND",
+    "countryName": "Honduras",
+    "iana": "America/Tegucigalpa",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Ulsan",
+    "countryCode": "KOR",
+    "countryName": "South Korea",
+    "iana": "Asia/Seoul",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Volgograd",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Volgograd",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Voronezh",
+    "countryCode": "RUS",
+    "countryName": "Russia",
+    "iana": "Europe/Moscow",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Warri",
+    "countryCode": "NGA",
+    "countryName": "Nigeria",
+    "iana": "Africa/Lagos",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Yaounde",
+    "countryCode": "CMR",
+    "countryName": "Cameroon",
+    "iana": "Africa/Douala",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Yokohama",
+    "countryCode": "JPN",
+    "countryName": "Japan",
+    "iana": "Asia/Tokyo",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Zagreb",
+    "countryCode": "HRV",
+    "countryName": "Croatia",
+    "iana": "Europe/Zagreb",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "city": "Zaporizhzhia",
+    "countryCode": "UKR",
+    "countryName": "Ukraine",
+    "iana": "Europe/Kyiv",
+    "lat": null,
+    "lon": null
   }
 ]

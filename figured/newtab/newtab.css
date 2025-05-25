@@ -340,3 +340,52 @@ body {
     background-color: #007AFF; /* Accent blue on hover */
     color: white;
 }
+
+/* Add to figured/figured/newtab/newtab.css */
+
+.locations-container {
+    margin-bottom: 15px; /* Space before the time/date block */
+    /* Add more styling if the container itself needs borders, padding, etc. */
+}
+
+.location-entry {
+    /* Styles for each city/country block within the container */
+    margin-bottom: 6px; /* Space between multiple city entries on the same card */
+}
+
+.location-entry:last-child {
+    margin-bottom: 0; /* No bottom margin for the last entry in the stack */
+}
+
+/* .city-name and .country-name styles should already exist, 
+   but ensure they work well within .location-entry.
+   For example, you might want to adjust their individual margins
+   if they were previously designed for a single city display.
+*/
+.location-entry .city-name {
+    font-size: 1.05em; /* Slightly adjust if needed */
+    font-weight: 600;
+    margin-bottom: 1px; /* Small space between city and country within an entry */
+}
+
+.location-entry .country-name {
+    font-size: 0.8em;
+    opacity: 0.75;
+}
+
+/* Add near other specific element styles like .city-name or .country-name */
+
+.home-indicator,
+.system-indicator {
+    display: none; /* Initially hidden; JS will make them visible */
+    margin-right: 6px; /* Space between emoji and city name */
+    font-size: 0.9em; /* Adjust size relative to city name if needed */
+    /* Optionally, add a specific color if not inheriting well, though emojis usually have their own color */
+    /* vertical-align: middle; */ /* May help alignment */
+}
+
+/* Style for within a location entry */
+.location-entry .city-name-wrapper {
+    display: flex; /* Align indicators and city name on the same line */
+    align-items: center; /* Vertically align items in the wrapper */
+}
