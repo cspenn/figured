@@ -1,23 +1,59 @@
-// Figured Service Worker
-// Version 1.0
+// Service Worker for Figured Chrome Extension
 
-console.log("Figured Service Worker Started.");
-
-// For Manifest V3, a service worker is required if you use certain APIs,
-// or just to have a background presence. For v1 of Figured, its role is minimal.
-
-// Example of listening for extension installation or update
+// Install event
 self.addEventListener('install', (event) => {
-  console.log('Figured extension installing...');
-  // Perform any first-time setup if needed, e.g., initializing storage defaults
-  // For Figured, most initialization is handled by newtab.js on first run.
+    console.log('Service Worker installed');
+    event.waitUntil(
+        caches.open('figured-v1').then(cache => {
+            return cache.addAll([
+                '/',
+                '/newtab/newtab.html',
+                '/newtab/newtab.css',
+                '/newtab/newtab.js',
+                '/common/locations.json'
+            ]);
+        })
+    );
 });
 
+// Activate event
 self.addEventListener('activate', (event) => {
-  console.log('Figured extension activated.');
+    console.log('Service Worker activated');
+    // Clean up old caches
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.filter(cacheName => {
+                    return cacheName.startsWith('figured-') && 
+                           cacheName !== 'figured-v1';
+                }).map(cacheName => {
+                    return caches.delete(cacheName);
+                })
+            );
+        })
+    );
 });
 
-// No complex background tasks like chrome.alarms for time updates are planned for V1,
-// as newtab.js will handle its own time updates with setInterval when the page is visible.
-// This service worker primarily fulfills the Manifest V3 requirement for an extension
-// that might use 'storage' or other permissions that imply a background context.
+// Fetch event
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request);
+        })
+    );
+});
+
+// Message handler for storage operations
+self.addEventListener('message', (event) => {
+    if (event.data.type === 'GET_STORAGE') {
+        chrome.storage.local.get(event.data.key, (result) => {
+            event.ports[0].postMessage(result);
+        });
+    } else if (event.data.type === 'SET_STORAGE') {
+        chrome.storage.local.set({[event.data.key]: event.data.value}, () => {
+            event.ports[0].postMessage({success: true});
+        });
+    }
+});
+
+console.log('Service Worker loaded');

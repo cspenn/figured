@@ -3,46 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figured - Your Timezones</title>
+    <title>Figured - Timezone Dashboard</title>
     <link rel="stylesheet" href="newtab.css">
 </head>
 <body>
-    <header class="controls-area">
-        <div class="add-timezone-wrapper">
-            <input type="text" id="city-search-input" placeholder="Search for a city...">
-            <button id="add-city-btn">Add Timezone</button>
-        </div>
-        <div id="home-prompt" style="display:none;">
-            <p>Welcome! Please select your Home timezone.</p>
-            <select id="home-timezone-select"></select>
-            <button id="set-home-btn">Set Home</button>
-        </div>
-         <div id="location-not-found-msg" style="display:none;">
-            <p>Location not found. Try the nearest major city. <button id="google-search-link" style="display:none;">Search on Google</button></p>
-        </div>
-    </header>
+    <div id="home-prompt" style="display: none;">
+        <h2>Welcome to Figured!</h2>
+        <p>Please select your home timezone to get started:</p>
+        <select id="home-timezone-select"></select>
+        <button id="set-home-btn">Set Home Timezone</button>
+    </div>
 
-    <main id="timezone-grid" class="timezone-grid">
-        <!-- Timezone cards will be dynamically inserted here -->
-    </main>
-
-    <template id="timezone-card-template">
-        <div class="timezone-card">
-            <button class="remove-tz-btn" aria-label="Remove Timezone">&times;</button>
-            <div class="location-info">
-                <h2 class="city-name">City Name</h2>
-                <p class="country-name">Country</p>
-            </div>
-            <div class="time-info">
-                <p class="current-time">HH:MM <span class="am-pm">AM/PM</span></p>
-                <p class="current-date">Day, Mon DDth</p>
-            </div>
-            <div class="zone-details">
-                <span class="tz-abbr">PST</span> | <span class="utc-offset">UTC-X</span>
-                <span class="dst-indicator" style="display:none;">☀️ DST</span>
-            </div>
+    <div class="add-timezone-wrapper">
+        <input type="text" id="city-search-input" placeholder="Add another timezone...">
+        <button id="add-city-btn">Add</button>
+        <div id="location-not-found-msg" style="display: none;">
+            Location not found. <a href="#" id="search-on-google">Search on Google</a>
         </div>
-    </template>
+    </div>
+
+    <div id="timezone-grid">
+        <!-- Timezone cards will be inserted here -->
+        <template id="timezone-card-template">
+            <div class="timezone-card">
+                <button class="remove-tz-btn">×</button>
+                <div class="city-name"></div>
+                <div class="country-name"></div>
+                <div class="current-time">
+                    <span class="time-value">HH:MM</span>
+                    <span class="am-pm"></span>
+                </div>
+                <div class="current-date"></div>
+                <div class="tz-abbr"></div>
+                <div class="utc-offset"></div>
+                <span class="dst-indicator">DST</span>
+            </div>
+        </template>
+    </div>
 
     <script src="newtab.js"></script>
 </body>

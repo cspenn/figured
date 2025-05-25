@@ -1,82 +1,162 @@
 [
   {
-    "city": "London",
-    "countryCode": "GB",
-    "countryName": "United Kingdom",
-    "iana": "Europe/London",
-    "lat": 51.5074,
-    "lon": 0.1278
-  },
-  {
     "city": "New York",
-    "countryCode": "US",
+    "countryCode": "USA",
     "countryName": "United States",
     "iana": "America/New_York",
     "lat": 40.7128,
     "lon": -74.0060
   },
   {
+    "city": "London",
+    "countryCode": "GBR",
+    "countryName": "United Kingdom",
+    "iana": "Europe/London",
+    "lat": 51.5074,
+    "lon": -0.1278
+  },
+  {
     "city": "Tokyo",
-    "countryCode": "JP",
+    "countryCode": "JPN",
     "countryName": "Japan",
     "iana": "Asia/Tokyo",
     "lat": 35.6895,
     "lon": 139.6917
   },
   {
-    "city": "Paris",
-    "countryCode": "FR",
-    "countryName": "France",
-    "iana": "Europe/Paris",
-    "lat": 48.8566,
-    "lon": 2.3522
-  },
-  {
     "city": "Sydney",
-    "countryCode": "AU",
+    "countryCode": "AUS",
     "countryName": "Australia",
     "iana": "Australia/Sydney",
     "lat": -33.8688,
     "lon": 151.2093
   },
   {
+    "city": "Paris",
+    "countryCode": "FRA",
+    "countryName": "France",
+    "iana": "Europe/Paris",
+    "lat": 48.8566,
+    "lon": 2.3522
+  },
+  {
+    "city": "Los Angeles",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Los_Angeles",
+    "lat": 34.0522,
+    "lon": -118.2437
+  },
+  {
+    "city": "Chicago",
+    "countryCode": "USA",
+    "countryName": "United States",
+    "iana": "America/Chicago",
+    "lat": 41.8781,
+    "lon": -87.6298
+  },
+  {
+    "city": "Hong Kong",
+    "countryCode": "HKG",
+    "countryName": "Hong Kong",
+    "iana": "Asia/Hong_Kong",
+    "lat": 22.3193,
+    "lon": 114.1694
+  },
+  {
+    "city": "Singapore",
+    "countryCode": "SGP",
+    "countryName": "Singapore",
+    "iana": "Asia/Singapore",
+    "lat": 1.3521,
+    "lon": 103.8198
+  },
+  {
+    "city": "Berlin",
+    "countryCode": "DEU",
+    "countryName": "Germany",
+    "iana": "Europe/Berlin",
+    "lat": 52.5200,
+    "lon": 13.4050
+  },
+  {
     "city": "Moscow",
-    "countryCode": "RU",
+    "countryCode": "RUS",
     "countryName": "Russia",
     "iana": "Europe/Moscow",
     "lat": 55.7558,
     "lon": 37.6173
   },
   {
-    "city": "Cairo",
-    "countryCode": "EG",
-    "countryName": "Egypt",
-    "iana": "Africa/Cairo",
-    "lat": 30.0444,
-    "lon": 31.2357
+    "city": "Dubai",
+    "countryCode": "ARE",
+    "countryName": "United Arab Emirates",
+    "iana": "Asia/Dubai",
+    "lat": 25.2048,
+    "lon": 55.2708
   },
   {
-    "city": "Beijing",
-    "countryCode": "CN",
+    "city": "Mumbai",
+    "countryCode": "IND",
+    "countryName": "India",
+    "iana": "Asia/Kolkata",
+    "lat": 19.0760,
+    "lon": 72.8777
+  },
+  {
+    "city": "Shanghai",
+    "countryCode": "CHN",
     "countryName": "China",
     "iana": "Asia/Shanghai",
-    "lat": 39.9042,
-    "lon": 116.4074
+    "lat": 31.2304,
+    "lon": 121.4737
+  },
+  {
+    "city": "Toronto",
+    "countryCode": "CAN",
+    "countryName": "Canada",
+    "iana": "America/Toronto",
+    "lat": 43.6532,
+    "lon": -79.3832
+  },
+  {
+    "city": "São Paulo",
+    "countryCode": "BRA",
+    "countryName": "Brazil",
+    "iana": "America/Sao_Paulo",
+    "lat": -23.5505,
+    "lon": -46.6333
   },
   {
     "city": "Mexico City",
-    "countryCode": "MX",
+    "countryCode": "MEX",
     "countryName": "Mexico",
     "iana": "America/Mexico_City",
     "lat": 19.4326,
     "lon": -99.1332
   },
   {
-    "city": "Sao Paulo",
-    "countryCode": "BR",
-    "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": -23.5505,
-    "lon": -46.6333
+    "city": "Cairo",
+    "countryCode": "EGY",
+    "countryName": "Egypt",
+    "iana": "Africa/Cairo",
+    "lat": 30.0444,
+    "lon": 31.2357
+  },
+  {
+    "city": "Johannesburg",
+    "countryCode": "ZAF",
+    "countryName": "South Africa",
+    "iana": "Africa/Johannesburg",
+    "lat": -26.2041,
+    "lon": 28.0473
+  },
+  {
+    "city": "Auckland",
+    "countryCode": "NZL",
+    "countryName": "New Zealand",
+    "iana": "Pacific/Auckland",
+    "lat": -36.8485,
+    "lon": 174.7633
   }
 ]
