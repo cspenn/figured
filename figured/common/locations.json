@@ -3,4496 +3,3366 @@
     "city": "New York",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": 40.7128,
-    "lon": -74.0060
+    "iana": "America/New_York"
   },
   {
     "city": "London",
     "countryCode": "GBR",
     "countryName": "United Kingdom",
-    "iana": "Europe/London",
-    "lat": 51.5074,
-    "lon": -0.1278
+    "iana": "Europe/London"
   },
   {
     "city": "Tokyo",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": 35.6895,
-    "lon": 139.6917
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Sydney",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Sydney",
-    "lat": -33.8688,
-    "lon": 151.2093
+    "iana": "Australia/Sydney"
   },
   {
     "city": "Paris",
     "countryCode": "FRA",
     "countryName": "France",
-    "iana": "Europe/Paris",
-    "lat": 48.8566,
-    "lon": 2.3522
+    "iana": "Europe/Paris"
   },
   {
     "city": "Los Angeles",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Los_Angeles",
-    "lat": 34.0522,
-    "lon": -118.2437
+    "iana": "America/Los_Angeles"
   },
   {
     "city": "Chicago",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": 41.8781,
-    "lon": -87.6298
+    "iana": "America/Chicago"
   },
   {
     "city": "Hong Kong",
     "countryCode": "HKG",
     "countryName": "Hong Kong",
-    "iana": "Asia/Hong_Kong",
-    "lat": 22.3193,
-    "lon": 114.1694
+    "iana": "Asia/Hong_Kong"
   },
   {
     "city": "Singapore",
     "countryCode": "SGP",
     "countryName": "Singapore",
-    "iana": "Asia/Singapore",
-    "lat": 1.3521,
-    "lon": 103.8198
+    "iana": "Asia/Singapore"
   },
   {
     "city": "Berlin",
     "countryCode": "DEU",
     "countryName": "Germany",
-    "iana": "Europe/Berlin",
-    "lat": 52.5200,
-    "lon": 13.4050
+    "iana": "Europe/Berlin"
   },
   {
     "city": "Moscow",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": 55.7558,
-    "lon": 37.6173
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Dubai",
     "countryCode": "ARE",
     "countryName": "United Arab Emirates",
-    "iana": "Asia/Dubai",
-    "lat": 25.2048,
-    "lon": 55.2708
+    "iana": "Asia/Dubai"
   },
   {
     "city": "Mumbai",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": 19.0760,
-    "lon": 72.8777
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Shanghai",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": 31.2304,
-    "lon": 121.4737
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Toronto",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Toronto",
-    "lat": 43.6532,
-    "lon": -79.3832
+    "iana": "America/Toronto"
   },
   {
     "city": "São Paulo",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": -23.5505,
-    "lon": -46.6333
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Mexico City",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Mexico_City",
-    "lat": 19.4326,
-    "lon": -99.1332
+    "iana": "America/Mexico_City"
   },
   {
     "city": "Cairo",
     "countryCode": "EGY",
     "countryName": "Egypt",
-    "iana": "Africa/Cairo",
-    "lat": 30.0444,
-    "lon": 31.2357
+    "iana": "Africa/Cairo"
   },
   {
     "city": "Johannesburg",
     "countryCode": "ZAF",
     "countryName": "South Africa",
-    "iana": "Africa/Johannesburg",
-    "lat": -26.2041,
-    "lon": 28.0473
+    "iana": "Africa/Johannesburg"
   },
   {
     "city": "Auckland",
     "countryCode": "NZL",
     "countryName": "New Zealand",
-    "iana": "Pacific/Auckland",
-    "lat": -36.8485,
-    "lon": 174.7633
+    "iana": "Pacific/Auckland"
   },
   {
     "city": "Abidjan",
     "countryCode": "CIV",
     "countryName": "Côte d'Ivoire",
-    "iana": "Africa/Abidjan",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Abidjan"
   },
   {
     "city": "Algiers",
     "countryCode": "DZA",
     "countryName": "Algeria",
-    "iana": "Africa/Algiers",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Algiers"
   },
   {
     "city": "Bissau",
     "countryCode": "GNB",
     "countryName": "Guinea-Bissau",
-    "iana": "Africa/Bissau",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Bissau"
   },
   {
     "city": "Casablanca",
     "countryCode": "MAR",
     "countryName": "Morocco",
-    "iana": "Africa/Casablanca",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Casablanca"
   },
   {
     "city": "Ceuta",
     "countryCode": "ESP",
     "countryName": "Spain",
-    "iana": "Africa/Ceuta",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Ceuta"
   },
   {
     "city": "El Aaiun",
     "countryCode": "ESH",
     "countryName": "Western Sahara",
-    "iana": "Africa/El_Aaiun",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/El_Aaiun"
   },
   {
     "city": "Juba",
     "countryCode": "SSD",
     "countryName": "South Sudan",
-    "iana": "Africa/Juba",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Juba"
   },
   {
     "city": "Khartoum",
     "countryCode": "SDN",
     "countryName": "Sudan",
-    "iana": "Africa/Khartoum",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Khartoum"
   },
   {
     "city": "Lagos",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Maputo",
     "countryCode": "MOZ",
     "countryName": "Mozambique",
-    "iana": "Africa/Maputo",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Maputo"
   },
   {
     "city": "Monrovia",
     "countryCode": "LBR",
     "countryName": "Liberia",
-    "iana": "Africa/Monrovia",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Monrovia"
   },
   {
     "city": "Nairobi",
     "countryCode": "KEN",
     "countryName": "Kenya",
-    "iana": "Africa/Nairobi",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Nairobi"
   },
   {
     "city": "Ndjamena",
     "countryCode": "TCD",
     "countryName": "Chad",
-    "iana": "Africa/Ndjamena",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Ndjamena"
   },
   {
     "city": "Sao Tome",
     "countryCode": "STP",
     "countryName": "Sao Tome and Principe",
-    "iana": "Africa/Sao_Tome",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Sao_Tome"
   },
   {
     "city": "Tripoli",
     "countryCode": "LBY",
     "countryName": "Libya",
-    "iana": "Africa/Tripoli",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Tripoli"
   },
   {
     "city": "Tunis",
     "countryCode": "TUN",
     "countryName": "Tunisia",
-    "iana": "Africa/Tunis",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Tunis"
   },
   {
     "city": "Windhoek",
     "countryCode": "NAM",
     "countryName": "Namibia",
-    "iana": "Africa/Windhoek",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Windhoek"
   },
   {
     "city": "Adak",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Adak",
-    "lat": null,
-    "lon": null
+    "iana": "America/Adak"
   },
   {
     "city": "Anchorage",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Anchorage",
-    "lat": null,
-    "lon": null
+    "iana": "America/Anchorage"
   },
   {
     "city": "Araguaina",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Araguaina",
-    "lat": null,
-    "lon": null
+    "iana": "America/Araguaina"
   },
   {
     "city": "Buenos Aires",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Buenos_Aires",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Buenos_Aires"
   },
   {
     "city": "Catamarca",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Catamarca",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Catamarca"
   },
   {
     "city": "Cordoba",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Cordoba",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Cordoba"
   },
   {
     "city": "Jujuy",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Jujuy",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Jujuy"
   },
   {
     "city": "La Rioja",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/La_Rioja",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/La_Rioja"
   },
   {
     "city": "Mendoza",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Mendoza",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Mendoza"
   },
   {
     "city": "Rio Gallegos",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Rio_Gallegos",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Rio_Gallegos"
   },
   {
     "city": "Salta",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Salta",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Salta"
   },
   {
     "city": "San Juan",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/San_Juan",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/San_Juan"
   },
   {
     "city": "San Luis",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/San_Luis",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/San_Luis"
   },
   {
     "city": "Tucuman",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Tucuman",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Tucuman"
   },
   {
     "city": "Ushuaia",
     "countryCode": "ARG",
     "countryName": "Argentina",
-    "iana": "America/Argentina/Ushuaia",
-    "lat": null,
-    "lon": null
+    "iana": "America/Argentina/Ushuaia"
   },
   {
     "city": "Asuncion",
     "countryCode": "PRY",
     "countryName": "Paraguay",
-    "iana": "America/Asuncion",
-    "lat": null,
-    "lon": null
+    "iana": "America/Asuncion"
   },
   {
     "city": "Bahia",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Bahia",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bahia"
   },
   {
     "city": "Bahia Banderas",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Bahia_Banderas",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bahia_Banderas"
   },
   {
     "city": "Barbados",
     "countryCode": "BRB",
     "countryName": "Barbados",
-    "iana": "America/Barbados",
-    "lat": null,
-    "lon": null
+    "iana": "America/Barbados"
   },
   {
     "city": "Belem",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Belem",
-    "lat": null,
-    "lon": null
+    "iana": "America/Belem"
   },
   {
     "city": "Belize",
     "countryCode": "BLZ",
     "countryName": "Belize",
-    "iana": "America/Belize",
-    "lat": null,
-    "lon": null
+    "iana": "America/Belize"
   },
   {
     "city": "Boa Vista",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Boa_Vista",
-    "lat": null,
-    "lon": null
+    "iana": "America/Boa_Vista"
   },
   {
     "city": "Bogota",
     "countryCode": "COL",
     "countryName": "Colombia",
-    "iana": "America/Bogota",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bogota"
   },
   {
     "city": "Boise",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Boise",
-    "lat": null,
-    "lon": null
+    "iana": "America/Boise"
   },
   {
     "city": "Cambridge Bay",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Cambridge_Bay",
-    "lat": null,
-    "lon": null
+    "iana": "America/Cambridge_Bay"
   },
   {
     "city": "Campo Grande",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Campo_Grande",
-    "lat": null,
-    "lon": null
+    "iana": "America/Campo_Grande"
   },
   {
     "city": "Cancun",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Cancun",
-    "lat": null,
-    "lon": null
+    "iana": "America/Cancun"
   },
   {
     "city": "Caracas",
     "countryCode": "VEN",
     "countryName": "Venezuela",
-    "iana": "America/Caracas",
-    "lat": null,
-    "lon": null
+    "iana": "America/Caracas"
   },
   {
     "city": "Cayenne",
     "countryCode": "GUF",
     "countryName": "French Guiana",
-    "iana": "America/Cayenne",
-    "lat": null,
-    "lon": null
+    "iana": "America/Cayenne"
   },
   {
     "city": "Chihuahua",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Chihuahua",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chihuahua"
   },
   {
     "city": "Ciudad Juarez",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Ciudad_Juarez",
-    "lat": null,
-    "lon": null
+    "iana": "America/Ciudad_Juarez"
   },
   {
     "city": "Costa Rica",
     "countryCode": "CRI",
     "countryName": "Costa Rica",
-    "iana": "America/Costa_Rica",
-    "lat": null,
-    "lon": null
+    "iana": "America/Costa_Rica"
   },
   {
     "city": "Coyhaique",
     "countryCode": "CHL",
     "countryName": "Chile",
-    "iana": "America/Coyhaique",
-    "lat": null,
-    "lon": null
+    "iana": "America/Coyhaique"
   },
   {
     "city": "Cuiaba",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Cuiaba",
-    "lat": null,
-    "lon": null
+    "iana": "America/Cuiaba"
   },
   {
     "city": "Danmarkshavn",
     "countryCode": "GRL",
     "countryName": "Greenland",
-    "iana": "America/Danmarkshavn",
-    "lat": null,
-    "lon": null
+    "iana": "America/Danmarkshavn"
   },
   {
     "city": "Dawson",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Dawson",
-    "lat": null,
-    "lon": null
+    "iana": "America/Dawson"
   },
   {
     "city": "Dawson Creek",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Dawson_Creek",
-    "lat": null,
-    "lon": null
+    "iana": "America/Dawson_Creek"
   },
   {
     "city": "Denver",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Denver",
-    "lat": null,
-    "lon": null
+    "iana": "America/Denver"
   },
   {
     "city": "Detroit",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Detroit",
-    "lat": null,
-    "lon": null
+    "iana": "America/Detroit"
   },
   {
     "city": "Edmonton",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Edmonton",
-    "lat": null,
-    "lon": null
+    "iana": "America/Edmonton"
   },
   {
     "city": "Eirunepe",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Eirunepe",
-    "lat": null,
-    "lon": null
+    "iana": "America/Eirunepe"
   },
   {
     "city": "El Salvador",
     "countryCode": "SLV",
     "countryName": "El Salvador",
-    "iana": "America/El_Salvador",
-    "lat": null,
-    "lon": null
+    "iana": "America/El_Salvador"
   },
   {
     "city": "Fort Nelson",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Fort_Nelson",
-    "lat": null,
-    "lon": null
+    "iana": "America/Fort_Nelson"
   },
   {
     "city": "Fortaleza",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Fortaleza",
-    "lat": null,
-    "lon": null
+    "iana": "America/Fortaleza"
   },
   {
     "city": "Glace Bay",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Glace_Bay",
-    "lat": null,
-    "lon": null
+    "iana": "America/Glace_Bay"
   },
   {
     "city": "Goose Bay",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Goose_Bay",
-    "lat": null,
-    "lon": null
+    "iana": "America/Goose_Bay"
   },
   {
     "city": "Grand Turk",
     "countryCode": "TCA",
     "countryName": "Turks and Caicos Islands",
-    "iana": "America/Grand_Turk",
-    "lat": null,
-    "lon": null
+    "iana": "America/Grand_Turk"
   },
   {
     "city": "Guatemala",
     "countryCode": "GT",
     "countryName": "GT",
-    "iana": "America/Guatemala",
-    "lat": null,
-    "lon": null
+    "iana": "America/Guatemala"
   },
   {
     "city": "Guayaquil",
     "countryCode": "EC",
     "countryName": "EC",
-    "iana": "America/Guayaquil",
-    "lat": null,
-    "lon": null
+    "iana": "America/Guayaquil"
   },
   {
     "city": "Guyana",
     "countryCode": "GUY",
     "countryName": "Guyana",
-    "iana": "America/Guyana",
-    "lat": null,
-    "lon": null
+    "iana": "America/Guyana"
   },
   {
     "city": "Halifax",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Halifax",
-    "lat": null,
-    "lon": null
+    "iana": "America/Halifax"
   },
   {
     "city": "Havana",
     "countryCode": "CUB",
     "countryName": "Cuba",
-    "iana": "America/Havana",
-    "lat": null,
-    "lon": null
+    "iana": "America/Havana"
   },
   {
     "city": "Hermosillo",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Hermosillo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Hermosillo"
   },
   {
     "city": "Indianapolis",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Indianapolis",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Indianapolis"
   },
   {
     "city": "Knox",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Knox",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Knox"
   },
   {
     "city": "Marengo",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Marengo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Marengo"
   },
   {
     "city": "Petersburg",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Petersburg",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Petersburg"
   },
   {
     "city": "Tell City",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Tell_City",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Tell_City"
   },
   {
     "city": "Vevay",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Vevay",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Vevay"
   },
   {
     "city": "Vincennes",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Vincennes",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Vincennes"
   },
   {
     "city": "Winamac",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Indiana/Winamac",
-    "lat": null,
-    "lon": null
+    "iana": "America/Indiana/Winamac"
   },
   {
     "city": "Inuvik",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Inuvik",
-    "lat": null,
-    "lon": null
+    "iana": "America/Inuvik"
   },
   {
     "city": "Iqaluit",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Iqaluit",
-    "lat": null,
-    "lon": null
+    "iana": "America/Iqaluit"
   },
   {
     "city": "Jamaica",
     "countryCode": "JAM",
     "countryName": "Jamaica",
-    "iana": "America/Jamaica",
-    "lat": null,
-    "lon": null
+    "iana": "America/Jamaica"
   },
   {
     "city": "Juneau",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Juneau",
-    "lat": null,
-    "lon": null
+    "iana": "America/Juneau"
   },
   {
     "city": "Louisville",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Kentucky/Louisville",
-    "lat": null,
-    "lon": null
+    "iana": "America/Kentucky/Louisville"
   },
   {
     "city": "Monticello",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Kentucky/Monticello",
-    "lat": null,
-    "lon": null
+    "iana": "America/Kentucky/Monticello"
   },
   {
     "city": "La Paz",
     "countryCode": "BOL",
     "countryName": "Bolivia",
-    "iana": "America/La_Paz",
-    "lat": null,
-    "lon": null
+    "iana": "America/La_Paz"
   },
   {
     "city": "Lima",
     "countryCode": "PER",
     "countryName": "Peru",
-    "iana": "America/Lima",
-    "lat": null,
-    "lon": null
+    "iana": "America/Lima"
   },
   {
     "city": "Maceio",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Maceio",
-    "lat": null,
-    "lon": null
+    "iana": "America/Maceio"
   },
   {
     "city": "Managua",
     "countryCode": "NIC",
     "countryName": "Nicaragua",
-    "iana": "America/Managua",
-    "lat": null,
-    "lon": null
+    "iana": "America/Managua"
   },
   {
     "city": "Manaus",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Manaus",
-    "lat": null,
-    "lon": null
+    "iana": "America/Manaus"
   },
   {
     "city": "Martinique",
     "countryCode": "MQ",
     "countryName": "MQ",
-    "iana": "America/Martinique",
-    "lat": null,
-    "lon": null
+    "iana": "America/Martinique"
   },
   {
     "city": "Matamoros",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Matamoros",
-    "lat": null,
-    "lon": null
+    "iana": "America/Matamoros"
   },
   {
     "city": "Mazatlan",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Mazatlan",
-    "lat": null,
-    "lon": null
+    "iana": "America/Mazatlan"
   },
   {
     "city": "Menominee",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Menominee",
-    "lat": null,
-    "lon": null
+    "iana": "America/Menominee"
   },
   {
     "city": "Merida",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Merida",
-    "lat": null,
-    "lon": null
+    "iana": "America/Merida"
   },
   {
     "city": "Metlakatla",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Metlakatla",
-    "lat": null,
-    "lon": null
+    "iana": "America/Metlakatla"
   },
   {
     "city": "Miquelon",
     "countryCode": "SPM",
     "countryName": "St. Pierre & Miquelon",
-    "iana": "America/Miquelon",
-    "lat": null,
-    "lon": null
+    "iana": "America/Miquelon"
   },
   {
     "city": "Moncton",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Moncton",
-    "lat": null,
-    "lon": null
+    "iana": "America/Moncton"
   },
   {
     "city": "Monterrey",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Monterrey",
-    "lat": null,
-    "lon": null
+    "iana": "America/Monterrey"
   },
   {
     "city": "Montevideo",
     "countryCode": "URY",
     "countryName": "Uruguay",
-    "iana": "America/Montevideo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Montevideo"
   },
   {
     "city": "Nome",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Nome",
-    "lat": null,
-    "lon": null
+    "iana": "America/Nome"
   },
   {
     "city": "Noronha",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Noronha",
-    "lat": null,
-    "lon": null
+    "iana": "America/Noronha"
   },
   {
     "city": "Beulah",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/North_Dakota/Beulah",
-    "lat": null,
-    "lon": null
+    "iana": "America/North_Dakota/Beulah"
   },
   {
     "city": "Center",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/North_Dakota/Center",
-    "lat": null,
-    "lon": null
+    "iana": "America/North_Dakota/Center"
   },
   {
     "city": "New Salem",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/North_Dakota/New_Salem",
-    "lat": null,
-    "lon": null
+    "iana": "America/North_Dakota/New_Salem"
   },
   {
     "city": "Nuuk",
     "countryCode": "GRL",
     "countryName": "Greenland",
-    "iana": "America/Nuuk",
-    "lat": null,
-    "lon": null
+    "iana": "America/Nuuk"
   },
   {
     "city": "Ojinaga",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Ojinaga",
-    "lat": null,
-    "lon": null
+    "iana": "America/Ojinaga"
   },
   {
     "city": "Panama",
     "countryCode": "PA",
     "countryName": "PA",
-    "iana": "America/Panama",
-    "lat": null,
-    "lon": null
+    "iana": "America/Panama"
   },
   {
     "city": "Paramaribo",
     "countryCode": "SUR",
     "countryName": "Suriname",
-    "iana": "America/Paramaribo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Paramaribo"
   },
   {
     "city": "Phoenix",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Phoenix",
-    "lat": null,
-    "lon": null
+    "iana": "America/Phoenix"
   },
   {
     "city": "Port-au-Prince",
     "countryCode": "HTI",
     "countryName": "Haiti",
-    "iana": "America/Port-au-Prince",
-    "lat": null,
-    "lon": null
+    "iana": "America/Port-au-Prince"
   },
   {
     "city": "Porto Velho",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Porto_Velho",
-    "lat": null,
-    "lon": null
+    "iana": "America/Porto_Velho"
   },
   {
     "city": "Puerto Rico",
     "countryCode": "PRI",
     "countryName": "Puerto Rico",
-    "iana": "America/Puerto_Rico",
-    "lat": null,
-    "lon": null
+    "iana": "America/Puerto_Rico"
   },
   {
     "city": "Punta Arenas",
     "countryCode": "CHL",
     "countryName": "Chile",
-    "iana": "America/Punta_Arenas",
-    "lat": null,
-    "lon": null
+    "iana": "America/Punta_Arenas"
   },
   {
     "city": "Rankin Inlet",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Rankin_Inlet",
-    "lat": null,
-    "lon": null
+    "iana": "America/Rankin_Inlet"
   },
   {
     "city": "Recife",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Recife",
-    "lat": null,
-    "lon": null
+    "iana": "America/Recife"
   },
   {
     "city": "Regina",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Regina",
-    "lat": null,
-    "lon": null
+    "iana": "America/Regina"
   },
   {
     "city": "Resolute",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Resolute",
-    "lat": null,
-    "lon": null
+    "iana": "America/Resolute"
   },
   {
     "city": "Rio Branco",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Rio_Branco",
-    "lat": null,
-    "lon": null
+    "iana": "America/Rio_Branco"
   },
   {
     "city": "Santarem",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Santarem",
-    "lat": null,
-    "lon": null
+    "iana": "America/Santarem"
   },
   {
     "city": "Santiago",
     "countryCode": "CHL",
     "countryName": "Chile",
-    "iana": "America/Santiago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Santiago"
   },
   {
     "city": "Santo Domingo",
     "countryCode": "DOM",
     "countryName": "Dominican Republic",
-    "iana": "America/Santo_Domingo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Santo_Domingo"
   },
   {
     "city": "Scoresbysund",
     "countryCode": "GRL",
     "countryName": "Greenland",
-    "iana": "America/Scoresbysund",
-    "lat": null,
-    "lon": null
+    "iana": "America/Scoresbysund"
   },
   {
     "city": "Sitka",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Sitka",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sitka"
   },
   {
     "city": "St Johns",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/St_Johns",
-    "lat": null,
-    "lon": null
+    "iana": "America/St_Johns"
   },
   {
     "city": "Swift Current",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Swift_Current",
-    "lat": null,
-    "lon": null
+    "iana": "America/Swift_Current"
   },
   {
     "city": "Tegucigalpa",
     "countryCode": "HN",
     "countryName": "HN",
-    "iana": "America/Tegucigalpa",
-    "lat": null,
-    "lon": null
+    "iana": "America/Tegucigalpa"
   },
   {
     "city": "Thule",
     "countryCode": "GRL",
     "countryName": "Greenland",
-    "iana": "America/Thule",
-    "lat": null,
-    "lon": null
+    "iana": "America/Thule"
   },
   {
     "city": "Tijuana",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Tijuana",
-    "lat": null,
-    "lon": null
+    "iana": "America/Tijuana"
   },
   {
     "city": "Vancouver",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Vancouver",
-    "lat": null,
-    "lon": null
+    "iana": "America/Vancouver"
   },
   {
     "city": "Whitehorse",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Whitehorse",
-    "lat": null,
-    "lon": null
+    "iana": "America/Whitehorse"
   },
   {
     "city": "Winnipeg",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Winnipeg",
-    "lat": null,
-    "lon": null
+    "iana": "America/Winnipeg"
   },
   {
     "city": "Yakutat",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Yakutat",
-    "lat": null,
-    "lon": null
+    "iana": "America/Yakutat"
   },
   {
     "city": "Casey",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Casey",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Casey"
   },
   {
     "city": "Davis",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Davis",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Davis"
   },
   {
     "city": "Macquarie",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Antarctica/Macquarie",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Macquarie"
   },
   {
     "city": "Mawson",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Mawson",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Mawson"
   },
   {
     "city": "Palmer",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Palmer",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Palmer"
   },
   {
     "city": "Rothera",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Rothera",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Rothera"
   },
   {
     "city": "Troll",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Troll",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Troll"
   },
   {
     "city": "Vostok",
     "countryCode": "ATA",
     "countryName": "Antarctica",
-    "iana": "Antarctica/Vostok",
-    "lat": null,
-    "lon": null
+    "iana": "Antarctica/Vostok"
   },
   {
     "city": "Almaty",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Almaty",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Almaty"
   },
   {
     "city": "Amman",
     "countryCode": "JOR",
     "countryName": "Jordan",
-    "iana": "Asia/Amman",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Amman"
   },
   {
     "city": "Anadyr",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Anadyr",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Anadyr"
   },
   {
     "city": "Aqtau",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Aqtau",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Aqtau"
   },
   {
     "city": "Aqtobe",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Aqtobe",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Aqtobe"
   },
   {
     "city": "Ashgabat",
     "countryCode": "TKM",
     "countryName": "Turkmenistan",
-    "iana": "Asia/Ashgabat",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Ashgabat"
   },
   {
     "city": "Atyrau",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Atyrau",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Atyrau"
   },
   {
     "city": "Baghdad",
     "countryCode": "IRQ",
     "countryName": "Iraq",
-    "iana": "Asia/Baghdad",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Baghdad"
   },
   {
     "city": "Baku",
     "countryCode": "AZE",
     "countryName": "Azerbaijan",
-    "iana": "Asia/Baku",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Baku"
   },
   {
     "city": "Bangkok",
     "countryCode": "THA",
     "countryName": "Thailand",
-    "iana": "Asia/Bangkok",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Bangkok"
   },
   {
     "city": "Barnaul",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Barnaul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Barnaul"
   },
   {
     "city": "Beirut",
     "countryCode": "LBN",
     "countryName": "Lebanon",
-    "iana": "Asia/Beirut",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Beirut"
   },
   {
     "city": "Bishkek",
     "countryCode": "KGZ",
     "countryName": "Kyrgyzstan",
-    "iana": "Asia/Bishkek",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Bishkek"
   },
   {
     "city": "Chita",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Chita",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Chita"
   },
   {
     "city": "Colombo",
     "countryCode": "LKA",
     "countryName": "Sri Lanka",
-    "iana": "Asia/Colombo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Colombo"
   },
   {
     "city": "Damascus",
     "countryCode": "SYR",
     "countryName": "Syria",
-    "iana": "Asia/Damascus",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Damascus"
   },
   {
     "city": "Dhaka",
     "countryCode": "BGD",
     "countryName": "Bangladesh",
-    "iana": "Asia/Dhaka",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Dhaka"
   },
   {
     "city": "Dili",
     "countryCode": "TLS",
     "countryName": "Timor-Leste",
-    "iana": "Asia/Dili",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Dili"
   },
   {
     "city": "Dushanbe",
     "countryCode": "TJK",
     "countryName": "Tajikistan",
-    "iana": "Asia/Dushanbe",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Dushanbe"
   },
   {
     "city": "Famagusta",
     "countryCode": "CYP",
     "countryName": "Cyprus",
-    "iana": "Asia/Famagusta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Famagusta"
   },
   {
     "city": "Gaza",
     "countryCode": "PSE",
     "countryName": "Palestine",
-    "iana": "Asia/Gaza",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Gaza"
   },
   {
     "city": "Hebron",
     "countryCode": "PSE",
     "countryName": "Palestine",
-    "iana": "Asia/Hebron",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Hebron"
   },
   {
     "city": "Ho Chi Minh",
     "countryCode": "VNM",
     "countryName": "Vietnam",
-    "iana": "Asia/Ho_Chi_Minh",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Ho_Chi_Minh"
   },
   {
     "city": "Hovd",
     "countryCode": "MNG",
     "countryName": "Mongolia",
-    "iana": "Asia/Hovd",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Hovd"
   },
   {
     "city": "Irkutsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Irkutsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Irkutsk"
   },
   {
     "city": "Jakarta",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jakarta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jakarta"
   },
   {
     "city": "Jayapura",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jayapura",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jayapura"
   },
   {
     "city": "Jerusalem",
     "countryCode": "ISR",
     "countryName": "Israel",
-    "iana": "Asia/Jerusalem",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jerusalem"
   },
   {
     "city": "Kabul",
     "countryCode": "AFG",
     "countryName": "Afghanistan",
-    "iana": "Asia/Kabul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kabul"
   },
   {
     "city": "Kamchatka",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Kamchatka",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kamchatka"
   },
   {
     "city": "Karachi",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Kathmandu",
     "countryCode": "NPL",
     "countryName": "Nepal",
-    "iana": "Asia/Kathmandu",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kathmandu"
   },
   {
     "city": "Khandyga",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Khandyga",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Khandyga"
   },
   {
     "city": "Krasnoyarsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Krasnoyarsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Krasnoyarsk"
   },
   {
     "city": "Kuching",
     "countryCode": "MYS",
     "countryName": "Malaysia",
-    "iana": "Asia/Kuching",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kuching"
   },
   {
     "city": "Macau",
     "countryCode": "MAC",
     "countryName": "Macau",
-    "iana": "Asia/Macau",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Macau"
   },
   {
     "city": "Magadan",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Magadan",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Magadan"
   },
   {
     "city": "Makassar",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Makassar",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Makassar"
   },
   {
     "city": "Manila",
     "countryCode": "PHL",
     "countryName": "Philippines",
-    "iana": "Asia/Manila",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Manila"
   },
   {
     "city": "Nicosia",
     "countryCode": "CYP",
     "countryName": "Cyprus",
-    "iana": "Asia/Nicosia",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Nicosia"
   },
   {
     "city": "Novokuznetsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Novokuznetsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Novokuznetsk"
   },
   {
     "city": "Novosibirsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Novosibirsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Novosibirsk"
   },
   {
     "city": "Omsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Omsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Omsk"
   },
   {
     "city": "Oral",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Oral",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Oral"
   },
   {
     "city": "Pontianak",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Pontianak",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Pontianak"
   },
   {
     "city": "Pyongyang",
     "countryCode": "PRK",
     "countryName": "North Korea",
-    "iana": "Asia/Pyongyang",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Pyongyang"
   },
   {
     "city": "Qatar",
     "countryCode": "QAT",
     "countryName": "Qatar",
-    "iana": "Asia/Qatar",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Qatar"
   },
   {
     "city": "Qostanay",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Qostanay",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Qostanay"
   },
   {
     "city": "Qyzylorda",
     "countryCode": "KAZ",
     "countryName": "Kazakhstan",
-    "iana": "Asia/Qyzylorda",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Qyzylorda"
   },
   {
     "city": "Riyadh",
     "countryCode": "SAU",
     "countryName": "Saudi Arabia",
-    "iana": "Asia/Riyadh",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Riyadh"
   },
   {
     "city": "Sakhalin",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Sakhalin",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Sakhalin"
   },
   {
     "city": "Samarkand",
     "countryCode": "UZ",
     "countryName": "UZ",
-    "iana": "Asia/Samarkand",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Samarkand"
   },
   {
     "city": "Seoul",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Srednekolymsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Srednekolymsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Srednekolymsk"
   },
   {
     "city": "Taipei",
     "countryCode": "TWN",
     "countryName": "Taiwan",
-    "iana": "Asia/Taipei",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Taipei"
   },
   {
     "city": "Tashkent",
     "countryCode": "UZ",
     "countryName": "UZ",
-    "iana": "Asia/Tashkent",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tashkent"
   },
   {
     "city": "Tbilisi",
     "countryCode": "GEO",
     "countryName": "Georgia",
-    "iana": "Asia/Tbilisi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tbilisi"
   },
   {
     "city": "Tehran",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Thimphu",
     "countryCode": "BTN",
     "countryName": "Bhutan",
-    "iana": "Asia/Thimphu",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Thimphu"
   },
   {
     "city": "Tomsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Tomsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tomsk"
   },
   {
     "city": "Ulaanbaatar",
     "countryCode": "MNG",
     "countryName": "Mongolia",
-    "iana": "Asia/Ulaanbaatar",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Ulaanbaatar"
   },
   {
     "city": "Urumqi",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Urumqi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Urumqi"
   },
   {
     "city": "Ust-Nera",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Ust-Nera",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Ust-Nera"
   },
   {
     "city": "Vladivostok",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Vladivostok",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Vladivostok"
   },
   {
     "city": "Yakutsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Yakutsk",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yakutsk"
   },
   {
     "city": "Yangon",
     "countryCode": "MMR",
     "countryName": "Myanmar",
-    "iana": "Asia/Yangon",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yangon"
   },
   {
     "city": "Yekaterinburg",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Yekaterinburg",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yekaterinburg"
   },
   {
     "city": "Yerevan",
     "countryCode": "ARM",
     "countryName": "Armenia",
-    "iana": "Asia/Yerevan",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yerevan"
   },
   {
     "city": "Azores",
     "countryCode": "PRT",
     "countryName": "Portugal",
-    "iana": "Atlantic/Azores",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Azores"
   },
   {
     "city": "Bermuda",
     "countryCode": "BMU",
     "countryName": "Bermuda",
-    "iana": "Atlantic/Bermuda",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Bermuda"
   },
   {
     "city": "Canary",
     "countryCode": "ESP",
     "countryName": "Spain",
-    "iana": "Atlantic/Canary",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Canary"
   },
   {
     "city": "Cape Verde",
     "countryCode": "CPV",
     "countryName": "Cape Verde",
-    "iana": "Atlantic/Cape_Verde",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Cape_Verde"
   },
   {
     "city": "Faroe",
     "countryCode": "FRO",
     "countryName": "Faroe Islands",
-    "iana": "Atlantic/Faroe",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Faroe"
   },
   {
     "city": "Madeira",
     "countryCode": "PRT",
     "countryName": "Portugal",
-    "iana": "Atlantic/Madeira",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Madeira"
   },
   {
     "city": "South Georgia",
     "countryCode": "SGS",
     "countryName": "South Georgia & South Sandwich Islands",
-    "iana": "Atlantic/South_Georgia",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/South_Georgia"
   },
   {
     "city": "Stanley",
     "countryCode": "FLK",
     "countryName": "Falkland Islands",
-    "iana": "Atlantic/Stanley",
-    "lat": null,
-    "lon": null
+    "iana": "Atlantic/Stanley"
   },
   {
     "city": "Adelaide",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Adelaide",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Adelaide"
   },
   {
     "city": "Brisbane",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Brisbane",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Brisbane"
   },
   {
     "city": "Broken Hill",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Broken_Hill",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Broken_Hill"
   },
   {
     "city": "Darwin",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Darwin",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Darwin"
   },
   {
     "city": "Eucla",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Eucla",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Eucla"
   },
   {
     "city": "Hobart",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Hobart",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Hobart"
   },
   {
     "city": "Lindeman",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Lindeman",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Lindeman"
   },
   {
     "city": "Lord Howe",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Lord_Howe",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Lord_Howe"
   },
   {
     "city": "Melbourne",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Melbourne",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Melbourne"
   },
   {
     "city": "Perth",
     "countryCode": "AUS",
     "countryName": "Australia",
-    "iana": "Australia/Perth",
-    "lat": null,
-    "lon": null
+    "iana": "Australia/Perth"
   },
   {
     "city": "GMT",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT"
   },
   {
     "city": "GMT+1",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+1",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+1"
   },
   {
     "city": "GMT+10",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+10",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+10"
   },
   {
     "city": "GMT+11",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+11",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+11"
   },
   {
     "city": "GMT+12",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+12",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+12"
   },
   {
     "city": "GMT+2",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+2",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+2"
   },
   {
     "city": "GMT+3",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+3",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+3"
   },
   {
     "city": "GMT+4",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+4",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+4"
   },
   {
     "city": "GMT+5",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+5",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+5"
   },
   {
     "city": "GMT+6",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+6",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+6"
   },
   {
     "city": "GMT+7",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+7",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+7"
   },
   {
     "city": "GMT+8",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+8",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+8"
   },
   {
     "city": "GMT+9",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT+9",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT+9"
   },
   {
     "city": "GMT-1",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-1",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-1"
   },
   {
     "city": "GMT-10",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-10",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-10"
   },
   {
     "city": "GMT-11",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-11",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-11"
   },
   {
     "city": "GMT-12",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-12",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-12"
   },
   {
     "city": "GMT-13",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-13",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-13"
   },
   {
     "city": "GMT-14",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-14",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-14"
   },
   {
     "city": "GMT-2",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-2",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-2"
   },
   {
     "city": "GMT-3",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-3",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-3"
   },
   {
     "city": "GMT-4",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-4",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-4"
   },
   {
     "city": "GMT-5",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-5",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-5"
   },
   {
     "city": "GMT-6",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-6",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-6"
   },
   {
     "city": "GMT-7",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-7",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-7"
   },
   {
     "city": "GMT-8",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-8",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-8"
   },
   {
     "city": "GMT-9",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/GMT-9",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/GMT-9"
   },
   {
     "city": "UTC",
     "countryCode": "",
     "countryName": "",
-    "iana": "Etc/UTC",
-    "lat": null,
-    "lon": null
+    "iana": "Etc/UTC"
   },
   {
     "city": "Andorra",
     "countryCode": "AND",
     "countryName": "Andorra",
-    "iana": "Europe/Andorra",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Andorra"
   },
   {
     "city": "Astrakhan",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Astrakhan",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Astrakhan"
   },
   {
     "city": "Athens",
     "countryCode": "GRC",
     "countryName": "Greece",
-    "iana": "Europe/Athens",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Athens"
   },
   {
     "city": "Belgrade",
     "countryCode": "SRB",
     "countryName": "Serbia",
-    "iana": "Europe/Belgrade",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Belgrade"
   },
   {
     "city": "Brussels",
     "countryCode": "BEL",
     "countryName": "Belgium",
-    "iana": "Europe/Brussels",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Brussels"
   },
   {
     "city": "Bucharest",
     "countryCode": "ROU",
     "countryName": "Romania",
-    "iana": "Europe/Bucharest",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Bucharest"
   },
   {
     "city": "Budapest",
     "countryCode": "HUN",
     "countryName": "Hungary",
-    "iana": "Europe/Budapest",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Budapest"
   },
   {
     "city": "Chisinau",
     "countryCode": "MDA",
     "countryName": "Moldova",
-    "iana": "Europe/Chisinau",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Chisinau"
   },
   {
     "city": "Dublin",
     "countryCode": "IRL",
     "countryName": "Ireland",
-    "iana": "Europe/Dublin",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Dublin"
   },
   {
     "city": "Gibraltar",
     "countryCode": "GIB",
     "countryName": "Gibraltar",
-    "iana": "Europe/Gibraltar",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Gibraltar"
   },
   {
     "city": "Helsinki",
     "countryCode": "FIN",
     "countryName": "Finland",
-    "iana": "Europe/Helsinki",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Helsinki"
   },
   {
     "city": "Istanbul",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Kaliningrad",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Kaliningrad",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kaliningrad"
   },
   {
     "city": "Kirov",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Kirov",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kirov"
   },
   {
     "city": "Kyiv",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   },
   {
     "city": "Lisbon",
     "countryCode": "PRT",
     "countryName": "Portugal",
-    "iana": "Europe/Lisbon",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Lisbon"
   },
   {
     "city": "Madrid",
     "countryCode": "ESP",
     "countryName": "Spain",
-    "iana": "Europe/Madrid",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Madrid"
   },
   {
     "city": "Malta",
     "countryCode": "MLT",
     "countryName": "Malta",
-    "iana": "Europe/Malta",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Malta"
   },
   {
     "city": "Minsk",
     "countryCode": "BLR",
     "countryName": "Belarus",
-    "iana": "Europe/Minsk",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Minsk"
   },
   {
     "city": "Prague",
     "countryCode": "CZE",
     "countryName": "Czechia",
-    "iana": "Europe/Prague",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Prague"
   },
   {
     "city": "Riga",
     "countryCode": "LVA",
     "countryName": "Latvia",
-    "iana": "Europe/Riga",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Riga"
   },
   {
     "city": "Rome",
     "countryCode": "ITA",
     "countryName": "Italy",
-    "iana": "Europe/Rome",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Rome"
   },
   {
     "city": "Samara",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Samara",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Samara"
   },
   {
     "city": "Saratov",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Saratov",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Saratov"
   },
   {
     "city": "Simferopol",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Simferopol",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Simferopol"
   },
   {
     "city": "Sofia",
     "countryCode": "BGR",
     "countryName": "Bulgaria",
-    "iana": "Europe/Sofia",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Sofia"
   },
   {
     "city": "Tallinn",
     "countryCode": "EST",
     "countryName": "Estonia",
-    "iana": "Europe/Tallinn",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Tallinn"
   },
   {
     "city": "Tirane",
     "countryCode": "ALB",
     "countryName": "Albania",
-    "iana": "Europe/Tirane",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Tirane"
   },
   {
     "city": "Ulyanovsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Ulyanovsk",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Ulyanovsk"
   },
   {
     "city": "Vienna",
     "countryCode": "AUT",
     "countryName": "Austria",
-    "iana": "Europe/Vienna",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Vienna"
   },
   {
     "city": "Vilnius",
     "countryCode": "LTU",
     "countryName": "Lithuania",
-    "iana": "Europe/Vilnius",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Vilnius"
   },
   {
     "city": "Volgograd",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Volgograd",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Volgograd"
   },
   {
     "city": "Warsaw",
     "countryCode": "POL",
     "countryName": "Poland",
-    "iana": "Europe/Warsaw",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Warsaw"
   },
   {
     "city": "Zurich",
     "countryCode": "CHE",
     "countryName": "Switzerland",
-    "iana": "Europe/Zurich",
-    "lat": null,
-    "lon": null
-  },
-  {
-    "city": "Factory",
-    "countryCode": "",
-    "countryName": "",
-    "iana": "Factory",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Zurich"
   },
   {
     "city": "Chagos",
     "countryCode": "IOT",
     "countryName": "British Indian Ocean Territory",
-    "iana": "Indian/Chagos",
-    "lat": null,
-    "lon": null
+    "iana": "Indian/Chagos"
   },
   {
     "city": "Maldives",
     "countryCode": "MDV",
     "countryName": "Maldives",
-    "iana": "Indian/Maldives",
-    "lat": null,
-    "lon": null
+    "iana": "Indian/Maldives"
   },
   {
     "city": "Mauritius",
     "countryCode": "MUS",
     "countryName": "Mauritius",
-    "iana": "Indian/Mauritius",
-    "lat": null,
-    "lon": null
+    "iana": "Indian/Mauritius"
   },
   {
     "city": "Apia",
     "countryCode": "WSM",
     "countryName": "Samoa",
-    "iana": "Pacific/Apia",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Apia"
   },
   {
     "city": "Bougainville",
     "countryCode": "PNG",
     "countryName": "Papua New Guinea",
-    "iana": "Pacific/Bougainville",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Bougainville"
   },
   {
     "city": "Chatham",
     "countryCode": "NZL",
     "countryName": "New Zealand",
-    "iana": "Pacific/Chatham",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Chatham"
   },
   {
     "city": "Easter",
     "countryCode": "CHL",
     "countryName": "Chile",
-    "iana": "Pacific/Easter",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Easter"
   },
   {
     "city": "Efate",
     "countryCode": "VUT",
     "countryName": "Vanuatu",
-    "iana": "Pacific/Efate",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Efate"
   },
   {
     "city": "Fakaofo",
     "countryCode": "TKL",
     "countryName": "Tokelau",
-    "iana": "Pacific/Fakaofo",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Fakaofo"
   },
   {
     "city": "Fiji",
     "countryCode": "FJI",
     "countryName": "Fiji",
-    "iana": "Pacific/Fiji",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Fiji"
   },
   {
     "city": "Galapagos",
     "countryCode": "EC",
     "countryName": "EC",
-    "iana": "Pacific/Galapagos",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Galapagos"
   },
   {
     "city": "Gambier",
     "countryCode": "PF",
     "countryName": "PF",
-    "iana": "Pacific/Gambier",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Gambier"
   },
   {
     "city": "Guadalcanal",
     "countryCode": "SLB",
     "countryName": "Solomon Islands",
-    "iana": "Pacific/Guadalcanal",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Guadalcanal"
   },
   {
     "city": "Guam",
     "countryCode": "GUM",
     "countryName": "Guam",
-    "iana": "Pacific/Guam",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Guam"
   },
   {
     "city": "Honolulu",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "Pacific/Honolulu",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Honolulu"
   },
   {
     "city": "Kanton",
     "countryCode": "KIR",
     "countryName": "Kiribati",
-    "iana": "Pacific/Kanton",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Kanton"
   },
   {
     "city": "Kiritimati",
     "countryCode": "KIR",
     "countryName": "Kiribati",
-    "iana": "Pacific/Kiritimati",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Kiritimati"
   },
   {
     "city": "Kosrae",
     "countryCode": "FSM",
     "countryName": "Micronesia",
-    "iana": "Pacific/Kosrae",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Kosrae"
   },
   {
     "city": "Kwajalein",
     "countryCode": "MHL",
     "countryName": "MHL",
-    "iana": "Pacific/Kwajalein",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Kwajalein"
   },
   {
     "city": "Marquesas",
     "countryCode": "PF",
     "countryName": "PF",
-    "iana": "Pacific/Marquesas",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Marquesas"
   },
   {
     "city": "Nauru",
     "countryCode": "NRU",
     "countryName": "Nauru",
-    "iana": "Pacific/Nauru",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Nauru"
   },
   {
     "city": "Niue",
     "countryCode": "NIU",
     "countryName": "Niue",
-    "iana": "Pacific/Niue",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Niue"
   },
   {
     "city": "Norfolk",
     "countryCode": "NFK",
     "countryName": "Norfolk Island",
-    "iana": "Pacific/Norfolk",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Norfolk"
   },
   {
     "city": "Noumea",
     "countryCode": "NCL",
     "countryName": "New Caledonia",
-    "iana": "Pacific/Noumea",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Noumea"
   },
   {
     "city": "Pago Pago",
     "countryCode": "ASM",
     "countryName": "American Samoa",
-    "iana": "Pacific/Pago_Pago",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Pago_Pago"
   },
   {
     "city": "Palau",
     "countryCode": "PLW",
     "countryName": "Palau",
-    "iana": "Pacific/Palau",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Palau"
   },
   {
     "city": "Pitcairn",
     "countryCode": "PCN",
     "countryName": "Pitcairn Islands",
-    "iana": "Pacific/Pitcairn",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Pitcairn"
   },
   {
     "city": "Port Moresby",
     "countryCode": "PNG",
     "countryName": "Papua New Guinea",
-    "iana": "Pacific/Port_Moresby",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Port_Moresby"
   },
   {
     "city": "Rarotonga",
     "countryCode": "COK",
     "countryName": "Cook Islands",
-    "iana": "Pacific/Rarotonga",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Rarotonga"
   },
   {
     "city": "Tahiti",
     "countryCode": "PF",
     "countryName": "PF",
-    "iana": "Pacific/Tahiti",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Tahiti"
   },
   {
     "city": "Tarawa",
     "countryCode": "KIR",
     "countryName": "Kiribati",
-    "iana": "Pacific/Tarawa",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Tarawa"
   },
   {
     "city": "Tongatapu",
     "countryCode": "TON",
     "countryName": "Tonga",
-    "iana": "Pacific/Tongatapu",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Tongatapu"
   },
   {
     "city": "Delhi",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Beijing",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Kolkata",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Kinshasa",
     "countryCode": "COD",
     "countryName": "Congo - Kinshasa",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Lahore",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Bengaluru",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Rio de Janeiro",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Shenzhen",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Guangzhou",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Chongqing",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Tianjin",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Chennai",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Hyderabad",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Osaka",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Pristina",
     "countryCode": "XKX",
     "countryName": "Kosovo",
-    "iana": "Europe/Belgrade",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Belgrade"
   },
   {
     "city": "Gaza City",
     "countryCode": "PSE",
     "countryName": "Gaza Strip",
-    "iana": "Asia/Gaza",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Gaza"
   },
   {
     "city": "Hebron",
     "countryCode": "PSE",
     "countryName": "West Bank",
-    "iana": "Asia/Hebron",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Hebron"
   },
   {
     "city": "Douglas",
     "countryCode": "IMN",
     "countryName": "Isle of Man",
-    "iana": "Europe/Isle_of_Man",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Isle_of_Man"
   },
   {
     "city": "St. Peter Port",
     "countryCode": "GGY",
     "countryName": "Guernsey",
-    "iana": "Europe/Guernsey",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Guernsey"
   },
   {
     "city": "St. Helier",
     "countryCode": "JEY",
     "countryName": "Jersey",
-    "iana": "Europe/Jersey",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Jersey"
   },
   {
     "city": "Saipan",
     "countryCode": "MNP",
     "countryName": "Northern Mariana Islands",
-    "iana": "Pacific/Saipan",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Saipan"
   },
   {
     "city": "Philipsburg",
     "countryCode": "SXM",
     "countryName": "Sint Maarten",
-    "iana": "America/Lower_Princes",
-    "lat": null,
-    "lon": null
+    "iana": "America/Lower_Princes"
   },
   {
     "city": "Schaan",
     "countryCode": "LIE",
     "countryName": "Liechtenstein",
-    "iana": "Europe/Vaduz",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Vaduz"
   },
   {
     "city": "Monaco",
     "countryCode": "MCO",
     "countryName": "Monaco",
-    "iana": "Europe/Monaco",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Monaco"
   },
   {
     "city": "Serravalle",
     "countryCode": "SMR",
     "countryName": "San Marino",
-    "iana": "Europe/San_Marino",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/San_Marino"
   },
   {
     "city": "Vatican City",
     "countryCode": "VAT",
     "countryName": "Vatican City",
-    "iana": "Europe/Vatican",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Vatican"
   },
   {
     "city": "Majuro",
     "countryCode": "MHL",
     "countryName": "Marshall Islands",
-    "iana": "Pacific/Majuro",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Majuro"
   },
   {
     "city": "Funafuti",
     "countryCode": "TUV",
     "countryName": "Tuvalu",
-    "iana": "Pacific/Funafuti",
-    "lat": null,
-    "lon": null
+    "iana": "Pacific/Funafuti"
   },
   {
     "city": "Basseterre",
     "countryCode": "KNA",
     "countryName": "Saint Kitts and Nevis",
-    "iana": "America/St_Kitts",
-    "lat": null,
-    "lon": null
+    "iana": "America/St_Kitts"
   },
   {
     "city": "Roseau",
     "countryCode": "DMA",
     "countryName": "Dominica",
-    "iana": "America/Dominica",
-    "lat": null,
-    "lon": null
+    "iana": "America/Dominica"
   },
   {
     "city": "St. George's",
     "countryCode": "GRD",
     "countryName": "Grenada",
-    "iana": "America/Grenada",
-    "lat": null,
-    "lon": null
+    "iana": "America/Grenada"
   },
   {
     "city": "Kingstown",
     "countryCode": "VCT",
     "countryName": "Saint Vincent and the Grenadines",
-    "iana": "America/St_Vincent",
-    "lat": null,
-    "lon": null
+    "iana": "America/St_Vincent"
   },
   {
     "city": "St. John's",
     "countryCode": "ATG",
     "countryName": "Antigua and Barbuda",
-    "iana": "America/Antigua",
-    "lat": null,
-    "lon": null
+    "iana": "America/Antigua"
   },
   {
     "city": "Victoria",
     "countryCode": "SYC",
     "countryName": "Seychelles",
-    "iana": "Indian/Mahe",
-    "lat": null,
-    "lon": null
+    "iana": "Indian/Mahe"
   },
   {
     "city": "Boston",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": 42.3601,
-    "lon": -71.0589
+    "iana": "America/New_York"
   },
   {
     "city": "Wuhan",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Nagoya",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Ahmedabad",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Kuala Lumpur",
     "countryCode": "MYS",
     "countryName": "Malaysia",
-    "iana": "Asia/Kuala_Lumpur",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kuala_Lumpur"
   },
   {
     "city": "Alexandria",
     "countryCode": "EGY",
     "countryName": "Egypt",
-    "iana": "Africa/Cairo",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Cairo"
   },
   {
     "city": "Saint Petersburg",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Surat",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Ankara",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Nanjing",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Hangzhou",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Xi'an",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Pune",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Belo Horizonte",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Guadalajara",
     "countryCode": "MEX",
     "countryName": "Mexico",
-    "iana": "America/Mexico_City",
-    "lat": null,
-    "lon": null
+    "iana": "America/Mexico_City"
   },
   {
     "city": "Miami",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Atlanta",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Philadelphia",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Washington",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Dallas",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "Houston",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "Surabaya",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jakarta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jakarta"
   },
   {
     "city": "Bandung",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jakarta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jakarta"
   },
   {
     "city": "Luanda",
     "countryCode": "AGO",
     "countryName": "Angola",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Accra",
     "countryCode": "GHA",
     "countryName": "Ghana",
-    "iana": "Africa/Accra",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Accra"
   },
   {
     "city": "Cape Town",
     "countryCode": "ZAF",
     "countryName": "South Africa",
-    "iana": "Africa/Johannesburg",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Johannesburg"
   },
   {
     "city": "Jeddah",
     "countryCode": "SAU",
     "countryName": "Saudi Arabia",
-    "iana": "Asia/Riyadh",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Riyadh"
   },
   {
     "city": "Kanpur",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Jaipur",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Faisalabad",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Chittagong",
     "countryCode": "BGD",
     "countryName": "Bangladesh",
-    "iana": "Asia/Dhaka",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Dhaka"
   },
   {
     "city": "Harbin",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Shenyang",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Qingdao",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Dalian",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Jinan",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Zhengzhou",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Changchun",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Suzhou",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Fuzhou",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Hefei",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Shijiazhuang",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Taiyuan",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Kunming",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Xiamen",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Changsha",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Wuxi",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Nanning",
     "countryCode": "CHN",
     "countryName": "China",
-    "iana": "Asia/Shanghai",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Shanghai"
   },
   {
     "city": "Lucknow",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Bhopal",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Ludhiana",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Agra",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Nashik",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Vadodara",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Patna",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Ghaziabad",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Indore",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Thane",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Medan",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jakarta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jakarta"
   },
   {
     "city": "Rawalpindi",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Multan",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Hyderabad (Pakistan)",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Gujranwala",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Peshawar",
     "countryCode": "PAK",
     "countryName": "Pakistan",
-    "iana": "Asia/Karachi",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Karachi"
   },
   {
     "city": "Busan",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Mashhad",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Isfahan",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Shiraz",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Tabriz",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Karaj",
     "countryCode": "IRN",
     "countryName": "Iran",
-    "iana": "Asia/Tehran",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tehran"
   },
   {
     "city": "Addis Ababa",
     "countryCode": "ETH",
     "countryName": "Ethiopia",
-    "iana": "Africa/Addis_Ababa",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Addis_Ababa"
   },
   {
     "city": "Dar es Salaam",
     "countryCode": "TZA",
     "countryName": "Tanzania",
-    "iana": "Africa/Dar_es_Salaam",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Dar_es_Salaam"
   },
   {
     "city": "Kano",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Ibadan",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Durban",
     "countryCode": "ZAF",
     "countryName": "South Africa",
-    "iana": "Africa/Johannesburg",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Johannesburg"
   },
   {
     "city": "Port Harcourt",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Abuja",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Birmingham",
     "countryCode": "GBR",
     "countryName": "United Kingdom",
-    "iana": "Europe/London",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/London"
   },
   {
     "city": "Manchester",
     "countryCode": "GBR",
     "countryName": "United Kingdom",
-    "iana": "Europe/London",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/London"
   },
   {
     "city": "Hamburg",
     "countryCode": "DEU",
     "countryName": "Germany",
-    "iana": "Europe/Berlin",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Berlin"
   },
   {
     "city": "Munich",
     "countryCode": "DEU",
     "countryName": "Germany",
-    "iana": "Europe/Berlin",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Berlin"
   },
   {
     "city": "Milan",
     "countryCode": "ITA",
     "countryName": "Italy",
-    "iana": "Europe/Rome",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Rome"
   },
   {
     "city": "Naples",
     "countryCode": "ITA",
     "countryName": "Italy",
-    "iana": "Europe/Rome",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Rome"
   },
   {
     "city": "Turin",
     "countryCode": "ITA",
     "countryName": "Italy",
-    "iana": "Europe/Rome",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Rome"
   },
   {
     "city": "Marseille",
     "countryCode": "FRA",
     "countryName": "France",
-    "iana": "Europe/Paris",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Paris"
   },
   {
     "city": "Valencia",
     "countryCode": "ESP",
     "countryName": "Spain",
-    "iana": "Europe/Madrid",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Madrid"
   },
   {
     "city": "Seville",
     "countryCode": "ESP",
     "countryName": "Spain",
-    "iana": "Europe/Madrid",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Madrid"
   },
   {
     "city": "Kazan",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Nizhny Novgorod",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Chelyabinsk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Yekaterinburg",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yekaterinburg"
   },
   {
     "city": "Ufa",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Yekaterinburg",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yekaterinburg"
   },
   {
     "city": "Rostov-on-Don",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Perm",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Asia/Yekaterinburg",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Yekaterinburg"
   },
   {
     "city": "San Francisco",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Los_Angeles",
-    "lat": null,
-    "lon": null
+    "iana": "America/Los_Angeles"
   },
   {
     "city": "Seattle",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Los_Angeles",
-    "lat": null,
-    "lon": null
+    "iana": "America/Los_Angeles"
   },
   {
     "city": "San Diego",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Los_Angeles",
-    "lat": null,
-    "lon": null
+    "iana": "America/Los_Angeles"
   },
   {
     "city": "Minneapolis",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "Tampa",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Baltimore",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "St. Louis",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "Montreal",
     "countryCode": "CAN",
     "countryName": "Canada",
-    "iana": "America/Toronto",
-    "lat": null,
-    "lon": null
+    "iana": "America/Toronto"
   },
   {
     "city": "Medellin",
     "countryCode": "COL",
     "countryName": "Colombia",
-    "iana": "America/Bogota",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bogota"
   },
   {
     "city": "Porto Alegre",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Recife",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Recife",
-    "lat": null,
-    "lon": null
+    "iana": "America/Recife"
   },
   {
     "city": "Salvador (Brazil)",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Bahia",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bahia"
   },
   {
     "city": "Curitiba",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Campinas",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Brasilia",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Sao_Paulo",
-    "lat": null,
-    "lon": null
+    "iana": "America/Sao_Paulo"
   },
   {
     "city": "Hanoi",
     "countryCode": "VNM",
     "countryName": "Vietnam",
-    "iana": "Asia/Ho_Chi_Minh",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Ho_Chi_Minh"
   },
   {
     "city": "Quezon City",
     "countryCode": "PHL",
     "countryName": "Philippines",
-    "iana": "Asia/Manila",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Manila"
   },
   {
     "city": "Caloocan",
     "countryCode": "PHL",
     "countryName": "Philippines",
-    "iana": "Asia/Manila",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Manila"
   },
   {
     "city": "Davao City",
     "countryCode": "PHL",
     "countryName": "Philippines",
-    "iana": "Asia/Manila",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Manila"
   },
   {
     "city": "Izmir",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Bursa",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Adana",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Gaziantep",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Adana",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Aleppo",
     "countryCode": "SYR",
     "countryName": "Syria",
-    "iana": "Asia/Damascus",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Damascus"
   },
   {
     "city": "Antalya",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Baku",
     "countryCode": "AZE",
     "countryName": "Azerbaijan",
-    "iana": "Asia/Baku",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Baku"
   },
   {
     "city": "Bamako",
     "countryCode": "MLI",
     "countryName": "Mali",
-    "iana": "Africa/Bamako",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Bamako"
   },
   {
     "city": "Barranquilla",
     "countryCode": "COL",
     "countryName": "Colombia",
-    "iana": "America/Bogota",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bogota"
   },
   {
     "city": "Belem",
     "countryCode": "BRA",
     "countryName": "Brazil",
-    "iana": "America/Belem",
-    "lat": null,
-    "lon": null
+    "iana": "America/Belem"
   },
   {
     "city": "Benin City",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Brazzaville",
     "countryCode": "COG",
     "countryName": "Congo - Brazzaville",
-    "iana": "Africa/Brazzaville",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Brazzaville"
   },
   {
     "city": "Cali",
     "countryCode": "COL",
     "countryName": "Colombia",
-    "iana": "America/Bogota",
-    "lat": null,
-    "lon": null
+    "iana": "America/Bogota"
   },
   {
     "city": "Cebu City",
     "countryCode": "PHL",
     "countryName": "Philippines",
-    "iana": "Asia/Manila",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Manila"
   },
   {
     "city": "Changwon",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Charlotte",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Chiclayo",
     "countryCode": "PER",
     "countryName": "Peru",
-    "iana": "America/Lima",
-    "lat": null,
-    "lon": null
+    "iana": "America/Lima"
   },
   {
     "city": "Chisinau",
     "countryCode": "MDA",
     "countryName": "Moldova",
-    "iana": "Europe/Chisinau",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Chisinau"
   },
   {
     "city": "Coimbatore",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Conakry",
     "countryCode": "GIN",
     "countryName": "Guinea",
-    "iana": "Africa/Conakry",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Conakry"
   },
   {
     "city": "Daegu",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Daejeon",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Dnipro",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   },
   {
     "city": "Donetsk",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   },
   {
     "city": "Douala",
     "countryCode": "CMR",
     "countryName": "Cameroon",
-    "iana": "Africa/Douala",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Douala"
   },
   {
     "city": "El Paso",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Denver",
-    "lat": null,
-    "lon": null
+    "iana": "America/Denver"
   },
   {
     "city": "Fort Worth",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "Fukuoka",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Goyang",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Gwangju",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Hiroshima",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Incheon",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Jacksonville",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/New_York",
-    "lat": null,
-    "lon": null
+    "iana": "America/New_York"
   },
   {
     "city": "Kaduna",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Kampala",
     "countryCode": "UGA",
     "countryName": "Uganda",
-    "iana": "Africa/Kampala",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Kampala"
   },
   {
     "city": "Kharkiv",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   },
   {
     "city": "Kitakyushu",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Kobe",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Konya",
     "countryCode": "TUR",
     "countryName": "Turkey",
-    "iana": "Europe/Istanbul",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Istanbul"
   },
   {
     "city": "Krakow",
     "countryCode": "POL",
     "countryName": "Poland",
-    "iana": "Europe/Warsaw",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Warsaw"
   },
   {
     "city": "Kumasi",
     "countryCode": "GHA",
     "countryName": "Ghana",
-    "iana": "Africa/Accra",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Accra"
   },
   {
     "city": "Kyoto",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Lodz",
     "countryCode": "POL",
     "countryName": "Poland",
-    "iana": "Europe/Warsaw",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Warsaw"
   },
   {
     "city": "Lubumbashi",
     "countryCode": "COD",
     "countryName": "Congo - Kinshasa",
-    "iana": "Africa/Lubumbashi",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lubumbashi"
   },
   {
     "city": "Lusaka",
     "countryCode": "ZMB",
     "countryName": "Zambia",
-    "iana": "Africa/Lusaka",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lusaka"
   },
   {
     "city": "Maracaibo",
     "countryCode": "VEN",
     "countryName": "Venezuela",
-    "iana": "America/Caracas",
-    "lat": null,
-    "lon": null
+    "iana": "America/Caracas"
   },
   {
     "city": "Meknes",
     "countryCode": "MAR",
     "countryName": "Morocco",
-    "iana": "Africa/Casablanca",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Casablanca"
   },
   {
     "city": "Mogadishu",
     "countryCode": "SOM",
     "countryName": "Somalia",
-    "iana": "Africa/Mogadishu",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Mogadishu"
   },
   {
     "city": "Mosul",
     "countryCode": "IRQ",
     "countryName": "Iraq",
-    "iana": "Asia/Baghdad",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Baghdad"
   },
   {
     "city": "Nagpur",
     "countryCode": "IND",
     "countryName": "India",
-    "iana": "Asia/Kolkata",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Kolkata"
   },
   {
     "city": "Novocherkassk",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Odesa",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   },
   {
     "city": "Oran",
     "countryCode": "DZA",
     "countryName": "Algeria",
-    "iana": "Africa/Algiers",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Algiers"
   },
   {
     "city": "Palembang",
     "countryCode": "IDN",
     "countryName": "Indonesia",
-    "iana": "Asia/Jakarta",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Jakarta"
   },
   {
     "city": "Phnom Penh",
     "countryCode": "KHM",
     "countryName": "Cambodia",
-    "iana": "Asia/Phnom_Penh",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Phnom_Penh"
   },
   {
     "city": "Port Said",
     "countryCode": "EGY",
     "countryName": "Egypt",
-    "iana": "Africa/Cairo",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Cairo"
   },
   {
     "city": "Quito",
     "countryCode": "ECU",
     "countryName": "Ecuador",
-    "iana": "America/Guayaquil",
-    "lat": null,
-    "lon": null
+    "iana": "America/Guayaquil"
   },
   {
     "city": "Rabat",
     "countryCode": "MAR",
     "countryName": "Morocco",
-    "iana": "Africa/Casablanca",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Casablanca"
   },
   {
     "city": "San Antonio",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Chicago",
-    "lat": null,
-    "lon": null
+    "iana": "America/Chicago"
   },
   {
     "city": "San Jose",
     "countryCode": "USA",
     "countryName": "United States",
-    "iana": "America/Los_Angeles",
-    "lat": null,
-    "lon": null
+    "iana": "America/Los_Angeles"
   },
   {
     "city": "Santa Cruz de la Sierra",
     "countryCode": "BOL",
     "countryName": "Bolivia",
-    "iana": "America/La_Paz",
-    "lat": null,
-    "lon": null
+    "iana": "America/La_Paz"
   },
   {
     "city": "Sapporo",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Sendai",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Shubra El-Kheima",
     "countryCode": "EGY",
     "countryName": "Egypt",
-    "iana": "Africa/Cairo",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Cairo"
   },
   {
     "city": "Suwon",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Tegucigalpa",
     "countryCode": "HND",
     "countryName": "Honduras",
-    "iana": "America/Tegucigalpa",
-    "lat": null,
-    "lon": null
+    "iana": "America/Tegucigalpa"
   },
   {
     "city": "Ulsan",
     "countryCode": "KOR",
     "countryName": "South Korea",
-    "iana": "Asia/Seoul",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Seoul"
   },
   {
     "city": "Volgograd",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Volgograd",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Volgograd"
   },
   {
     "city": "Voronezh",
     "countryCode": "RUS",
     "countryName": "Russia",
-    "iana": "Europe/Moscow",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Moscow"
   },
   {
     "city": "Warri",
     "countryCode": "NGA",
     "countryName": "Nigeria",
-    "iana": "Africa/Lagos",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Lagos"
   },
   {
     "city": "Yaounde",
     "countryCode": "CMR",
     "countryName": "Cameroon",
-    "iana": "Africa/Douala",
-    "lat": null,
-    "lon": null
+    "iana": "Africa/Douala"
   },
   {
     "city": "Yokohama",
     "countryCode": "JPN",
     "countryName": "Japan",
-    "iana": "Asia/Tokyo",
-    "lat": null,
-    "lon": null
+    "iana": "Asia/Tokyo"
   },
   {
     "city": "Zagreb",
     "countryCode": "HRV",
     "countryName": "Croatia",
-    "iana": "Europe/Zagreb",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Zagreb"
   },
   {
     "city": "Zaporizhzhia",
     "countryCode": "UKR",
     "countryName": "Ukraine",
-    "iana": "Europe/Kyiv",
-    "lat": null,
-    "lon": null
+    "iana": "Europe/Kyiv"
   }
 ]

@@ -19,14 +19,14 @@
         <button id="set-home-btn">Set Home Timezone</button>
     </div>
 
-    <div class="add-timezone-wrapper">
-        <input type="text" id="city-search-input" placeholder="Add another timezone...">
-        <button id="add-city-btn">Add</button>
-    </div>
-    <ul id="city-suggestions-list" class="city-suggestions-list" style="display: none;"></ul>
-    <div id="location-not-found-msg" style="display: none;">
-        Location not found. <a href="#" id="search-on-google-link" target="_blank" rel="noopener noreferrer">Search on Google</a>
-    </div>
+         <div class="add-timezone-wrapper">
+             <input type="text" id="city-search-input" placeholder="Add another timezone...">
+             <button id="add-city-btn">Add</button>
+            <ul id="city-suggestions-list" class="city-suggestions-list" style="display: none;"></ul>
+         </div>
+         <div id="location-not-found-msg" style="display: none;">
+            Location not found. <a id="search-on-google-link" href="#" target="_blank" rel="noopener noreferrer">Search on Google</a>
+         </div>
 
     <div id="timezone-grid">
         <!-- Timezone cards will be inserted here -->
@@ -51,9 +51,15 @@
                 <div class="utc-offset"></div>
                 <span class="dst-indicator">DST</span>
             </div>
-        </template>
+         </template>
+     </div>
+ 
+    <div id="ad-banner-trustinsights" class="ad-banner">
+        <a href="https://www.trustinsights.ai/contact?utm_source=figured&utm_medium=chrome_extension&utm_campaign=figured" target="_blank" rel="noopener noreferrer">
+            Learn more about how TrustInsights.ai can solve your analytics, data science, and AI challenges.
+        </a>
     </div>
-
-    <script src="newtab.js"></script>
-</body>
++
+     <script src="newtab.js"></script>
+ </body>
 </html>

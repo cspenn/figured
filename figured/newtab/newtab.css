@@ -7,8 +7,9 @@ body {
     display: flex; /* For centering content if needed, or managing overall layout */
     flex-direction: column;
     align-items: center; /* Center the add timezone wrapper and grid */
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh; 
     box-sizing: border-box; /* Include padding in element's total width and height */
+    padding-bottom: 50px; /* EXAMPLE: Adjust this value based on actual ad banner height */
 }
 
 #home-prompt {
@@ -151,18 +152,122 @@ body {
     /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); */
 }
 
-/* Dynamic Background Colors */
-.timezone-card.day {
-    background-image: linear-gradient(135deg, #FFD3A5 0%, #FD6585 100%); /* Example: light green to darker green */
-    color: #333; /* Dark text for light backgrounds */
+/* === ADD THESE STYLES, REMOVE OLD .day/.evening/.night BACKGROUNDS === */
+
+/* New Granular Time Slot Backgrounds */
+.timezone-card.slot-00-01 { /* 00:00 - 01:59 */
+    background-image: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%); /* Dark Blue to Steel Blue */
+    color: #E0E0E0;
 }
-.timezone-card.evening {
-    background-image: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 50%, #FF99AC 100%); /* Example: orange to deep orange */
-    color: white;
+.timezone-card.slot-00-01 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #E0E0E0; }
+.timezone-card.slot-00-01 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-00-01 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+.timezone-card.slot-02-03 { /* 02:00 - 03:59 */
+    background-image: linear-gradient(135deg, #1B263B 0%, #2A3B4D 100%); /* Steel Blue to Dark Slate */
+    color: #E0E0E0;
 }
-.timezone-card.night {
-    background-image: linear-gradient(135deg, #3B2667 0%, #BC78EC 100%); /* Example: indigo to deep purple/blue */
-    color: #f0f0f0; /* Light text for dark backgrounds */
+.timezone-card.slot-02-03 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #E0E0E0; }
+.timezone-card.slot-02-03 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-02-03 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+.timezone-card.slot-04-05 { /* 04:00 - 05:59 */
+    background-image: linear-gradient(135deg, #2A3B4D 0%, #4A5568 100%); /* Dark Slate to Slate Gray */
+    color: #E0E0E0;
+}
+.timezone-card.slot-04-05 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #E0E0E0; }
+.timezone-card.slot-04-05 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-04-05 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+.timezone-card.slot-06-07 { /* 06:00 - 07:59 */
+    background-image: linear-gradient(135deg, #766A98 0%, #E8A87C 100%); /* Dusky Purple to Soft Peach */
+    color: #2D3748; 
+}
+.timezone-card.slot-06-07 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #2D3748; }
+.timezone-card.slot-06-07 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(45, 55, 72, 0.7); }
+.timezone-card.slot-06-07 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #2D3748; }
+
+.timezone-card.slot-08-09 { /* 08:00 - 09:59 */
+    background-image: linear-gradient(135deg, #A2D2FF 0%, #BDE0FE 100%); /* Light Sky to Powder Blue */
+    color: #1A202C;
+}
+.timezone-card.slot-08-09 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #1A202C; }
+.timezone-card.slot-08-09 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(26, 32, 44, 0.7); }
+.timezone-card.slot-08-09 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #1A202C; }
+
+.timezone-card.slot-10-11 { /* 10:00 - 11:59 */
+    background-image: linear-gradient(135deg, #BDE0FE 0%, #FFFFE0 100%); /* Powder Blue to Light Yellow */
+    color: #1A202C;
+}
+.timezone-card.slot-10-11 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #1A202C; }
+.timezone-card.slot-10-11 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(26, 32, 44, 0.7); }
+.timezone-card.slot-10-11 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #1A202C; }
+
+.timezone-card.slot-12-13 { /* 12:00 - 13:59 -- MIDDAY */
+    background-image: linear-gradient(135deg, #FFFFCC 0%, #FFFACD 100%); /* Pale Yellow to LemonChiffon */
+    color: #2D3748; 
+}
+.timezone-card.slot-12-13 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #2D3748; }
+.timezone-card.slot-12-13 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(45, 55, 72, 0.7); }
+.timezone-card.slot-12-13 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #2D3748; }
+
+.timezone-card.slot-14-15 { /* 14:00 - 15:59 */
+    background-image: linear-gradient(135deg, #FFFACD 0%, #FFDAB9 100%); /* LemonChiffon to PeachPuff */
+    color: #2D3748;
+}
+.timezone-card.slot-14-15 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #2D3748; }
+.timezone-card.slot-14-15 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(45, 55, 72, 0.7); }
+.timezone-card.slot-14-15 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #2D3748; }
+
+.timezone-card.slot-16-17 { /* 16:00 - 17:59 */
+    background-image: linear-gradient(135deg, #FFDAB9 0%, #FFB347 100%); /* PeachPuff to Pastel Orange */
+    color: #2D3748;
+}
+.timezone-card.slot-16-17 .dst-indicator { background-color: rgba(0, 0, 0, 0.08); color: #2D3748; }
+.timezone-card.slot-16-17 .remove-tz-btn { background: rgba(0, 0, 0, 0.05); color: rgba(45, 55, 72, 0.7); }
+.timezone-card.slot-16-17 .remove-tz-btn:hover { background: rgba(0, 0, 0, 0.1); color: #2D3748; }
+
+.timezone-card.slot-18-19 { /* 18:00 - 19:59 */
+    background-image: linear-gradient(135deg, #FF8C69 0%, #C850C0 100%); /* Coral to Fuchsia Pink */
+    color: #FFFFFF;
+}
+.timezone-card.slot-18-19 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #FFFFFF; }
+.timezone-card.slot-18-19 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-18-19 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+.timezone-card.slot-20-21 { /* 20:00 - 21:59 */
+    background-image: linear-gradient(135deg, #483D8B 0%, #6A5ACD 100%); /* DarkSlateBlue to SlateBlue */
+    color: #E0E0E0;
+}
+.timezone-card.slot-20-21 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #E0E0E0; }
+.timezone-card.slot-20-21 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-20-21 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+.timezone-card.slot-22-23 { /* 22:00 - 23:59 */
+    background-image: linear-gradient(135deg, #2A3B4D 0%, #0D1B2A 100%); /* Dark Slate to Dark Blue */
+    color: #E0E0E0;
+}
+.timezone-card.slot-22-23 .dst-indicator { background-color: rgba(255, 255, 255, 0.15); color: #E0E0E0; }
+.timezone-card.slot-22-23 .remove-tz-btn { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.7); }
+.timezone-card.slot-22-23 .remove-tz-btn:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+
+/* Ensure base transition for smooth color changes */
+.timezone-card {
+    /* background-color: #2c2c2c; REMOVE - handled by .day/.night/.evening */
+    border-radius: 12px; /* More rounded corners like design */
+    padding: 20px; /* More internal padding */
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-image 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.2s ease-in-out; /* For smooth color changes */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    min-height: 280px; /* Ensure cards have a consistent minimum height or let content define it */
+    justify-content: space-between; /* Distribute content vertically */
+    overflow: hidden; /* Hide anything that overflows, e.g., large shadows */
+}
+.timezone-card:hover {
+    /* transform: translateY(-3px); */
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35); */
 }
 
 
@@ -388,4 +493,32 @@ body {
 .location-entry .city-name-wrapper {
     display: flex; /* Align indicators and city name on the same line */
     align-items: center; /* Vertically align items in the wrapper */
+}
+
+/* === ADD THESE STYLES FOR THE AD BANNER === */
+
+/* Advertisement Banner Styles */
+.ad-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #1F1F1F; /* Example: Dark background */
+    color: #B0B0B0; /* Example: Light grey text */
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.85em;
+    z-index: 1000; /* High z-index to stay on top */
+    border-top: 1px solid #333;
+    box-sizing: border-box;
+}
+
+.ad-banner a {
+    color: #00AEEF; /* Example: Contrasting link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ad-banner a:hover {
+    text-decoration: underline;
 }
