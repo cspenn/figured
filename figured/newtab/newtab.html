@@ -22,6 +22,15 @@
          <div class="add-timezone-wrapper">
              <input type="text" id="city-search-input" placeholder="Add another timezone...">
              <button id="add-city-btn">Add</button>
+            <!-- New 12/24 Hour Toggle -->
+            <div class="time-format-toggle-container">
+                <span class="toggle-label">12H</span>
+                <label class="switch">
+                    <input type="checkbox" id="time-format-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">24H</span>
+            </div>
             <ul id="city-suggestions-list" class="city-suggestions-list" style="display: none;"></ul>
          </div>
          <div id="location-not-found-msg" style="display: none;">
@@ -33,23 +42,32 @@
         <template id="timezone-card-template">
             <div class="timezone-card">
                 <button class="remove-tz-btn">×</button>
+                <!-- Time Info Block: Moved to appear before locations -->
+                <div class="time-info-block">
+                    <div class="current-time">
+                        <span class="time-value">HH:MM</span>
+                        <span class="am-pm"></span> <!-- AM/PM visibility depends on 12/24h format -->
+                    </div>
+                    <div class="current-date"></div>
+                    <div class="timezone-meta"> <!-- Wrapper for abbr and offset -->
+                        <div class="tz-abbr"></div>
+                        <div class="utc-offset"></div>
+                    </div>
+                    <span class="dst-indicator">DST</span>
+                </div>
                 <!-- Container for multiple locations sharing the same IANA for this card -->
                 <div class="locations-container">
                     <!-- JS will populate this. Example structure for one location:
                     <div class="location-entry">
-                        <div class="city-name">City Name</div>
+                        <div class="city-name-wrapper">
+                            <span class="home-indicator">🏠</span>
+                            <span class="system-indicator">🕰️</span>
+                            <div class="city-name">City Name</div>
+                        </div>
                         <div class="country-name">Country</div>
                     </div>
                     -->
                 </div>
-                <div class="current-time">
-                    <span class="time-value">HH:MM</span>
-                    <span class="am-pm"></span>
-                </div>
-                <div class="current-date"></div>
-                <div class="tz-abbr"></div>
-                <div class="utc-offset"></div>
-                <span class="dst-indicator">DST</span>
             </div>
          </template>
      </div>
@@ -58,8 +76,7 @@
         <a href="https://www.trustinsights.ai/contact?utm_source=figured&utm_medium=chrome_extension&utm_campaign=figured" target="_blank" rel="noopener noreferrer">
             Learn more about how TrustInsights.ai can solve your analytics, data science, and AI challenges.
         </a>
-    </div>
-+
-     <script src="newtab.js"></script>
+        </div>
+        <script src="newtab.js"></script>
  </body>
 </html>

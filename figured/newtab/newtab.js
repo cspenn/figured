@@ -12,6 +12,10 @@ const notificationArea = document.getElementById('notification-area');
 const notificationMessage = document.getElementById('notification-message');
 const notificationCloseBtn = document.getElementById('notification-close-btn');
 
+const timeFormatToggle = document.getElementById('time-format-toggle');
+let use24HourFormat = false; // Default to 12-hour format
+const TIME_FORMAT_KEY = 'use24HourFormatPreference';
+
 // Notification System
 function showNotification(message, type = 'info', duration = 3000) {
     notificationMessage.textContent = message;
@@ -83,6 +87,7 @@ async function init() {
             console.log('[Figured] isSuggestionClicked reset to false.');
         }, 200);
     });
+    setupTimeFormatToggleEventListeners(); // Setup listeners for the toggle
 }
 
 // Load locations data from JSON file
@@ -119,6 +124,22 @@ async function loadUserTimezones() {
     } catch (error) {
         console.error("Error loading user timezones from storage:", error);
         userTimezones = [];
+    }
+}
+
+// Load time format preference
+async function loadTimeFormatPreference() {
+    try {
+        const result = await chrome.storage.local.get([TIME_FORMAT_KEY]);
+        if (result[TIME_FORMAT_KEY] !== undefined) {
+            use24HourFormat = result[TIME_FORMAT_KEY];
+        }
+        if (timeFormatToggle) { // Check if element exists
+            timeFormatToggle.checked = use24HourFormat;
+        }
+    } catch (error) {
+        console.error("Error loading time format preference:", error);
+        use24HourFormat = false; // Default on error
     }
 }
 
@@ -337,15 +358,27 @@ function updateTimezoneCard(cardElement, groupCardData, now) {
             return;
         }
         const representativeIana = groupCardData.representativeIana.trim();
-        const optionsTime = { timeZone: representativeIana, hour: 'numeric', minute: 'numeric', hour12: true };
-        const optionsDate = { timeZone: representativeIana, weekday: 'short', month: 'short', day: 'numeric' };
+        const optionsTime = { 
+           timeZone: representativeIana, 
+           hour: 'numeric', 
+           minute: 'numeric', 
+           hour12: !use24HourFormat // Apply 12/24 hour format preference
+       };     
     
         // Format time
         const timeFormatter = new Intl.DateTimeFormat(navigator.language, optionsTime);
         const timeString = timeFormatter.format(now);
-        const [timeValue, amPmValue = ''] = timeString.split(' ');
+        let timeValue, amPmValue = '';
     
-        // Correctly target the '.time-value' span for the main time
+        if (!use24HourFormat) { // 12-hour format with AM/PM
+            const timeParts = new Intl.DateTimeFormat(navigator.language, optionsTime).formatToParts(now);
+            timeValue = timeParts.filter(p => p.type === 'hour' || p.type === 'minute' || (p.type === 'literal' && p.value === ':')).map(p=>p.value).join('');
+            amPmValue = timeParts.find(p => p.type === 'dayPeriod')?.value || '';
+        } else { // 24-hour format
+            timeValue = timeString; // Entire string is the time, e.g., "18:16"
+            amPmValue = ''; // No AM/PM
+        }
+    
         const timeValueElement = cardElement.querySelector('.time-value');
         if (timeValueElement) {
             timeValueElement.textContent = timeValue;
@@ -354,15 +387,21 @@ function updateTimezoneCard(cardElement, groupCardData, now) {
             console.error("Element with class '.time-value' not found in card for representative IANA:", representativeIana);
         }
     
-        // Target the '.am-pm' span
         const amPmElement = cardElement.querySelector('.am-pm');
         if (amPmElement) {
             amPmElement.textContent = amPmValue;
+            amPmElement.style.display = use24HourFormat ? 'none' : 'inline'; // Show/hide AM/PM span
         } else {
             // console.warn("Element with class '.am-pm' not found in card for representative IANA:", representativeIana);
         }
             
         // Format date
+        const optionsDate = { 
+            timeZone: representativeIana, 
+            weekday: 'short', 
+            day: 'numeric', 
+            month: 'short' 
+        };
         const dateFormatter = new Intl.DateTimeFormat(navigator.language, optionsDate);
         const dateElement = cardElement.querySelector('.current-date');
         if (dateElement) {
@@ -854,6 +893,22 @@ async function addCurrentSystemTimezone() {
     } catch (error) {
         console.error("Error adding current system timezone:", error);
         showNotification("Could not determine or add your system timezone.", 'error');
+    }
+}
+
+// Setup event listener for the time format toggle
+function setupTimeFormatToggleEventListeners() {
+    if (timeFormatToggle) {
+        timeFormatToggle.addEventListener('change', async () => {
+            use24HourFormat = timeFormatToggle.checked;
+            try {
+                await chrome.storage.local.set({ [TIME_FORMAT_KEY]: use24HourFormat });
+                updateAllDisplayedTimes(); // Re-render all cards with new format
+            } catch (error) {
+                console.error("Error saving time format preference:", error);
+                showNotification('Failed to save time format setting.', 'error');
+            }
+        });
     }
 }
 
