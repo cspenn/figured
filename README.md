@@ -1,6 +1,8 @@
 # Figured
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+![Figured screenshot](https://www.christopherspenn.com/wp-content/uploads/2025/05/2025-05-27_18-46-19.png)
+
 **Figured** is a Google Chrome extension by [Christopher Penn](https://www.christopherspenn.com/), sponsored by [TrustInsights.ai](https://www.trustinsights.ai/). It's a resurrection of the old "Figure It Out" service, which has been defunct for years, reimagined for the modern web with a focus on privacy and local operation.
 
 Figured provides an intuitive and efficient way to view multiple timezones simultaneously on your Chrome new tab page. It emphasizes local operation, user privacy, and a clean, informative interface.
